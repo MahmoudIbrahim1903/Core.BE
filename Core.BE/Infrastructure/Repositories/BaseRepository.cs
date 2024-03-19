@@ -86,7 +86,6 @@ namespace Emeint.Core.BE.Infrastructure.Repositories
 
             // After executing this line all the changes (from the Command Handler and Domain Event Handlers) 
             // performed throught the DbContext will be commited
-            //test comment
 
             try
             {
