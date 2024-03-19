@@ -1,0 +1,7 @@
+﻿--AbdelGhaffar
+--DML
+
+USE [O7.Microservice.MailingDb]
+
+INSERT INTO [Mailing].[MailTemplates] ([Code],	[Comment]	, [CreatedBy], [CreationDate]	 , [MailType]					,[ModificationDate] ,[ModifiedBy] ,[TemplateNameAr] ,[TemplateNameEn])
+                               VALUES ('MT-3'	 , null     , 'EME'		 ,(select GETDATE()) ,'ForgotPasswordEmailType' ,null					,null	   ,'ForgotPasswordEmailTemplateAr.html'	 ,'ForgotPasswordEmailTemplateEn.html')

@@ -1,0 +1,5 @@
+﻿SET IDENTITY_INSERT [Messaging].[DevicePlatforms] ON 
+
+INSERT [Messaging].[DevicePlatforms] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [ModificationDate], [ModifiedBy], [Name]) VALUES (1, N'P-8732', NULL, N'Nasser', CAST(0x071CAA5B6D8B493E0B AS DateTime2), NULL, NULL, N'android')
+INSERT [Messaging].[DevicePlatforms] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [ModificationDate], [ModifiedBy], [Name]) VALUES (2, N'P-3421', NULL, N'Nasser', CAST(0x071CAA5B6D8B493E0B AS DateTime2), NULL, NULL, N'ios')
+SET IDENTITY_INSERT [Messaging].[DevicePlatforms] OFF

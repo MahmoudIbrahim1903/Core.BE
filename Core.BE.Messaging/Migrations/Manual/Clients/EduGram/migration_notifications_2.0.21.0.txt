@@ -1,0 +1,13 @@
+﻿
+SET IDENTITY_INSERT [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates] ON
+INSERT [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates] 
+       ([Id], [Code],    [Comment], [ContentAr],                                   [ContentEn],                                     [CreatedBy], [CreationDate],[ModificationDate], [ModifiedBy], [Name],                          [TitleAr],                     [TitleEn]) 
+VALUES (4,    N'T-1144', NULL,      N'الرجاء الانتقال إلى {0} لبدء الدرس الأول!', N'Please, go to {0} to start your first lesson!', N'Edugram',  GETDATE(),     NULL,               NULL,         N'RoundStartReminderToStudent', N'سيبدأ المعسكر خلال {0} دقيقة', N'Camp Starts In {0} Minutes')
+SET IDENTITY_INSERT [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates] off
+
+
+INSERT [EduGram.Microservice.MessagingDb].[Messaging].[MessageTypes]       
+       ([Code],           [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) 
+VALUES (N'RUN-RMNDR-STD', NULL,      N'Edugram',  GETDATE()     , 4,                   NULL,               NULL,         N'Student Round Start Reminder')
+
+

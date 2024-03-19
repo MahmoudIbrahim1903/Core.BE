@@ -1,0 +1,100 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyVersion>4.0.21.0</AssemblyVersion>
+    <FileVersion>4.0.21.0</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="API\Infrastructure\AutofacModules\**" />
+    <Compile Remove="Infrastructure\**" />
+    <Compile Remove="Model\**" />
+    <EmbeddedResource Remove="API\Infrastructure\AutofacModules\**" />
+    <EmbeddedResource Remove="Infrastructure\**" />
+    <EmbeddedResource Remove="Model\**" />
+    <None Remove="API\Infrastructure\AutofacModules\**" />
+    <None Remove="Infrastructure\**" />
+    <None Remove="Model\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="API\BaseStartup.cs" />
+    <Compile Remove="API\Program.cs" />
+    <Compile Remove="Domain\Exceptions\InvalidParametersException .cs" />
+    <Compile Remove="Domain\SeedWork\BaseResponse.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Infrastructure\DBContext\CountryBaseDBContext.cs" />
+    <Compile Include="Infrastructure\EntityConfigurations\ClientCommandEntityTypeConfiguration.cs" />
+    <Compile Include="Infrastructure\EntityConfigurations\ClientRequestLoggingMiddlewareEntityTypeConfiguration.cs" />
+    <Compile Include="Infrastructure\Idempotency\ClientCommand.cs" />
+    <Compile Include="Infrastructure\Idempotency\ICommandManager.cs" />
+    <Compile Include="Infrastructure\Idempotency\CommandManager.cs" />
+    <Compile Include="Infrastructure\MediatorExtension.cs" />
+    <Compile Include="Infrastructure\Repositories\BaseCosmosRepository.cs" />
+    <Compile Include="Infrastructure\Repositories\BaseRepository.cs" />
+    <Compile Include="Infrastructure\Repositories\CommonMessagesRepositoryBase.cs" />
+    <Compile Include="Infrastructure\Repositories\EnumerationRepository.cs" />
+    <Compile Include="Infrastructure\Services\Contracts\IService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Extensions.AspNetCore.Configuration.Secrets" Version="1.2.2" />
+    <PackageReference Include="MassTransit" Version="7.3.1" />
+    <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.31.2" />
+    <PackageReference Include="Microsoft.NETCore.App" Version="2.2.8" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.13" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="Autofac" Version="6.5.0" />
+    <PackageReference Include="EPPlus.Core" Version="1.5.4" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="7.2.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.21.0" />
+    <PackageReference Include="MediatR" Version="11.1.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Common" Version="4.4.0" />
+    <PackageReference Include="Sendgrid" Version="9.28.1" />
+    <PackageReference Include="Serilog.Extensions.Logging.File" Version="3.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.3.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" Version="5.3.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
+    <PackageReference Include="System.Reflection" Version="4.3.0" />
+    <PackageReference Include="Polly" Version="7.2.3" />
+    <PackageReference Include="CacheManager.Core" Version="1.2.0" />
+    <PackageReference Include="CacheManager.Microsoft.Extensions.Caching.Memory" Version="1.2.0" />
+    <PackageReference Include="CacheManager.Serialization.Json" Version="1.2.0" />
+    <PackageReference Include="EFSecondLevelCache.Core" Version="2.9.1" />
+	<PackageReference Include="Microsoft.Extensions.PlatformAbstractions" Version="1.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="EventBus">
+      <HintPath>Libraries\EventBus.dll</HintPath>
+    </Reference>
+    <Reference Include="EventBusRabbitMQ">
+      <HintPath>Libraries\EventBusRabbitMQ.dll</HintPath>
+    </Reference>
+    <Reference Include="EventBusServiceBus">
+      <HintPath>Libraries\EventBusServiceBus.dll</HintPath>
+    </Reference>
+    <Reference Include="IntegrationEventLogEF">
+      <HintPath>Libraries\IntegrationEventLogEF.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.HealthChecks">
+      <HintPath>Libraries\Microsoft.AspNetCore.HealthChecks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.HealthChecks">
+      <HintPath>Libraries\Microsoft.Extensions.HealthChecks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.HealthChecks.SqlServer">
+      <HintPath>Libraries\Microsoft.Extensions.HealthChecks.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="WebHost.Customization">
+      <HintPath>Libraries\WebHost.Customization.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

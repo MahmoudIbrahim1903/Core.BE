@@ -1,0 +1,22 @@
+﻿USE [O7.Microservice.MessagingDb]
+GO
+
+UPDATE [Messaging].[MessageTemplates]
+   SET [ContentEn] = N'You have a new session booking with {0} on {1} and at {2}.' ,
+   [ContentAr] = N'لديك حجز جديد مع {0} في {1} وفي الساعة {2}.'
+      
+ WHERE [Name] = 'NewSessionBookingToTherapist'
+GO
+
+
+USE [O7.Microservice.MessagingDb]
+
+UPDATE [Messaging].[MessageTemplates]
+   SET 
+      [ContentEn] = N'This is a kind reminder that your session with {0} scheduled on {1} at {2} is soon taking place.' , 
+      [ContentAr] = N'لديك جلسة مع {0}، في {1} وفي الساعة {2} . من فضلك كن على استعداد.'
+     
+ WHERE [Code] = 'T-1188'
+GO
+
+

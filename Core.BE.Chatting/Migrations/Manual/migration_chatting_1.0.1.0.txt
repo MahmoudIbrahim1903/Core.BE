@@ -1,0 +1,20 @@
+﻿
+
+BEGIN
+   IF NOT EXISTS (select * from [Configuration].[Settings] where [key] ='ChattingAdminId')
+   BEGIN
+      INSERT [Configuration].[Settings] ([Code], [Comment], [CreatedBy], [CreationDate], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [User], [Value], [SettingType], [EnumTypeName], [DisplayName], [Description], [ShowInPortal], [UnitOfMeasure])
+VALUES ( N'cc-ChattingAdminId', NULL, N'System', GETDATE(), N'Chat', N'ChattingAdminId', NULL, NULL, NULL, NULL, 0, N'ChattingAdminId', 0, NULL, N'ChattingAdminId', N'ChattingAdminId', 0, null)
+   END
+END
+GO
+
+
+BEGIN
+   IF NOT EXISTS (select * from [Configuration].[Settings] where [key] ='ChattingAdminName')
+   BEGIN
+      INSERT [Configuration].[Settings] ([Code], [Comment], [CreatedBy], [CreationDate], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [User], [Value], [SettingType], [EnumTypeName], [DisplayName], [Description], [ShowInPortal], [UnitOfMeasure])
+VALUES ( N'cc-ChattingAdminName', NULL, N'System', GETDATE(), N'Chat', N'ChattingAdminName', NULL, NULL, NULL, NULL, 0, N'Admin', 0, NULL, N'ChattingAdminName', N'ChattingAdminName', 0, null)
+   END
+END
+GO

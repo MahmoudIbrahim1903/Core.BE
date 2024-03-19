@@ -1,0 +1,9 @@
+﻿   IF EXISTS (select * from [Configuration].[Settings] where [key] ='ChattingAdminId')
+      delete from [Configuration].[Settings] where [key] ='ChattingAdminId'
+
+      GO
+
+  IF EXISTS (select * from [Configuration].[Settings] where [key] ='ChattingAdminName')
+      delete from [Configuration].[Settings] where [key] ='ChattingAdminName'
+
+      GO

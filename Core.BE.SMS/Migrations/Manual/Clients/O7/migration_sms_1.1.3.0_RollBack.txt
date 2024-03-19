@@ -1,0 +1,6 @@
+﻿
+USE [O7.Microservice.SmsDb]
+GO
+if exists (select * from [Sms].MessageTemplates where code='TherapistSessionRescheduled')
+delete from [Sms].[MessageTemplates] where [Code]= 'TherapistSessionRescheduled'
+GO

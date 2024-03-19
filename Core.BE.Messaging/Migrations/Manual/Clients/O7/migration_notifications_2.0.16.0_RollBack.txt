@@ -1,0 +1,15 @@
+﻿USE [O7.Microservice.MessagingDb]
+GO
+
+UPDATE [Messaging].[MessageTemplates]
+   SET [ContentEn] = N'Reminder: You have a session in {0} minutes! Please ensure you are on-time.'
+      
+ WHERE [Name] = 'FirstSessionReminderToPatient'
+GO
+
+
+UPDATE [Messaging].[MessageTemplates]
+   SET [ContentEn] = N'Reminder: Your session is in {0} minutes! Please be ready on-time.'
+      
+ WHERE [Name] = 'SecondSessionReminderToPatient'
+GO

@@ -1,0 +1,11 @@
+﻿
+USE [O7.Microservice.SmsDb]
+GO
+delete from [Sms].[MessageTemplates] where [Code]= 'TherapistSessionAboutToStart'
+GO
+if not exists (select * from [Sms].MessageTemplates where code='TherapistSessionAboutToStart')
+INSERT [Sms].[MessageTemplates] ([Code], [CreationDate], [ModificationDate], [CreatedBy], [ModifiedBy], [Comment], [ContentEn], [ContentAr], [TemplateName]) VALUES (N'TherapistSessionAboutToStart', CAST(N'2019-04-01T00:00:00.0000000' AS DateTime2), NULL, N'system', NULL, NULL, N'This is a kind reminder that your session with {0} scheduled on {1} and at {2} {3} is soon taking place.', N'This is a kind reminder that your session with {0} scheduled on {1} and at {2} {3} is soon taking place.', N'TherapistSessionAboutToStart')
+GO
+if not exists (select * from [Sms].MessageTemplates where code='TherapistSessionBooked')
+INSERT [Sms].[MessageTemplates] ([Code], [CreationDate], [ModificationDate], [CreatedBy], [ModifiedBy], [Comment], [ContentEn], [ContentAr], [TemplateName]) VALUES (N'TherapistSessionBooked', CAST(N'2019-04-04T00:00:00.0000000' AS DateTime2), NULL, N'system', NULL, NULL, N'You have a session booked with {0}, on {1} and at {2} {3}.You can visit my clients to learn more about the client’s background.', N'You have a session booked with {0}, on {1} and at {2} {3}.You can visit my clients to learn more about the client’s background.', N'TherapistSessionBooked')
+GO

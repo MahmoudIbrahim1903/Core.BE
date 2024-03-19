@@ -1,0 +1,6 @@
+﻿
+if exists (select * from [Sms].[MessageTemplates] where code='CampUnpublished')
+delete from [Sms].[MessageTemplates] where [Code]= 'CampUnPublished'
+
+if exists (select * from [Sms].[MessageTemplates] where code='CampRepublished')
+delete from [Sms].[MessageTemplates] where [Code]= 'CampRepublished'

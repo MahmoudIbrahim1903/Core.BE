@@ -1,0 +1,20 @@
+﻿USE [EduGram.Microservice.MessagingDb]
+GO
+BEGIN
+   IF NOT EXISTS (select * from [Messaging].[MessageTemplates] where [Name] ='Text')
+   BEGIN
+      INSERT [Messaging].[MessageTemplates] ([Id], [Code], [Comment], [ContentAr], [ContentEn], [CreatedBy], [CreationDate], [ModificationDate], [ModifiedBy], [Name], [TitleAr], [TitleEn]) VALUES (1, N'T-7652', NULL, N'{0}', N'{0}', N'Nasser', CAST(N'2018-05-21 11:07:06.1971225' AS DateTime2), NULL, NULL, N'Text', N'{0}', N'{0}')
+   END
+END
+
+BEGIN
+   IF EXISTS (select * from [Messaging].[MessageTemplates] where [Name] ='Text')
+   BEGIN
+    UPDATE [Messaging].[MessageTemplates]
+       SET 
+          [TitleAr] = '{0}'
+         ,[TitleEn] = '{0}'
+         WHERE [Name] = 'Text'
+   END
+END
+GO

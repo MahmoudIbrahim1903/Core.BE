@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyVersion>4.0.5.0</AssemblyVersion>
+    <FileVersion>4.0.5.0</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\**" />
+    <Content Remove="Migrations\**" />
+    <EmbeddedResource Remove="Migrations\**" />
+    <None Remove="Migrations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Migrations\20181119155557__Configuration19_11_2018.cs" />
+    <Compile Include="Migrations\20181119155557__Configuration19_11_2018.Designer.cs" />
+    <Compile Include="Migrations\20181206101200_release-4.0Conf.cs" />
+    <Compile Include="Migrations\20181206101200_release-4.0Conf.Designer.cs" />
+    <Compile Include="Migrations\20190116172029_release-23.0.cs" />
+    <Compile Include="Migrations\20190116172029_release-23.0.Designer.cs" />
+    <Compile Include="Migrations\ConfigurationContextModelSnapshot.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="4.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="4.0.0" />
+    <PackageReference Include="Microsoft.NetCore.App" Version="2.2.8" />
+    <PackageReference Include="Abp.EntityFrameworkCore" Version="2.0.1" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Common" Version="4.4.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" PrivateAssets="All" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.3.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" Version="5.3.1" />
+    <PackageReference Include="System.ComponentModel.TypeConverter" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Migrations\Manual\migration_config_1.0.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core.BE.Cache\Core.BE.Cache\Emeint.Core.BE.Cache.csproj" />
+    <ProjectReference Include="..\Core.BE\Emeint.Core.BE.csproj" />
+  </ItemGroup>
+
+
+</Project>

@@ -1,0 +1,12 @@
+﻿Samar
+---------------------------DDL------------------------------------------
+
+begin
+ IF NOT EXISTS (SELECT [key] FROM  [Dryve.Microservice.MessagingDb].[Messaging].[MessageTemplates] where Name= 'OwnerVehicleServiceCentersChanged')
+INSERT INTO [Dryve.Microservice.MessagingDb].[Messaging].[MessageTemplates] (Code, ContentAr,ContentEn , CreatedBy ,CreationDate, [Name], TitleAr , TitleEn)
+VALUES ('T-112570', N'تم تغيير مراكز الصيانة لسيارتك , يمكنك فحص ذلك و تعديلها', 'Your vehicle's service centers have been changed, you can check and edit it.','Samar', GETDATE(),'OwnerVehicleServiceCentersChanged',N'تم تغيير مراكز الصيانة لسياراتك','Your Vehicle Service Centers have been changed');
+end
+GO
+IF NOT EXISTS (SELECT [Code] FROM  [Dryve.Microservice.MessagingDb].[Messaging].[MessageTypes] where Code= 'O-VSC-CHANGED')
+INSERT INTO [Dryve.Microservice.MessagingDb].[Messaging].[MessageTypes] (Code,CreatedBy,CreationDate,MessageTemplateId,[Name])
+VALUES ('O-VSC-CHANGED','Samar',GETDATE(),scope_identity(),'Vehicle's Service Centers have been changed')

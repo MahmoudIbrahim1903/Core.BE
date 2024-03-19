@@ -1,0 +1,10 @@
+﻿--Samar
+--DML
+
+
+delete from [Mailing].[MailTemplates] where [MailType] ='OwnerEmailAtPickupTemplate'
+delete from [Mailing].[MailTemplates] where [MailType] ='DriverEmailAtPickupTemplate'
+delete from [Mailing].[MailTemplates] where [MailType] ='OwnerEmailAtDropOffTemplate'
+delete from [Mailing].[MailTemplates] where [MailType] ='DriverEmailAtDropOffTemplate'
+delete from [Mailing].[MailTemplates] where [MailType] ='DriverEmailAtDropOffWithChargesTemplate'
+delete from [Mailing].[MailTemplates] where [MailType] ='OwnerEmailAtDropOffWithChargesTemplate'

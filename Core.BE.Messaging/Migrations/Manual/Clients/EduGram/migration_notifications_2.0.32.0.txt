@@ -1,0 +1,7 @@
+﻿
+  Update [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates]
+  Set [TitleEn] = N'Camp {0} Joined successfully.',
+      [TitleAr] = N'لقد انضممت للمعسكر {0} بنجاح.',
+      [ContentEn] = N'You are now enrolled in the camp.',
+      [ContentAr] = N'أنت الآن مسجل في المعسكر.'
+  Where [Code] = 'T-1122'

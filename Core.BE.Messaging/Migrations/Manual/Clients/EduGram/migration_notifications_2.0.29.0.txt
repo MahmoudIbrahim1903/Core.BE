@@ -1,0 +1,29 @@
+-- returned for update
+
+SET IDENTITY_INSERT [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates] ON
+INSERT [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates] 
+       ([Id], [Code],    [Comment], [ContentAr],                                                                               [ContentEn],[CreatedBy], [CreationDate],[ModificationDate], [ModifiedBy], [Name],                       [TitleAr],          [TitleEn]) 
+VALUES (8,    N'T-1168', NULL,      N'الرجاء مراجعة تعليقاتنا على معسكر {0} واتخاذ الإجراءات المطلوبة حتى يمكنك نشره.', N'Please review our comments on camp {0} and take the required actions to be able to publish it', N'Edugram',  GETDATE(),     NULL,               NULL,         N'Returned Camp To Teacher', N'{0} إرجاع معسكر', N'{0} camp returned for update')
+SET IDENTITY_INSERT [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates] off
+
+
+INSERT [EduGram.Microservice.MessagingDb].[Messaging].[MessageTypes]       
+       ([Code],         [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) 
+VALUES (N'CM-RTFU-TECH', NULL,      N'Edugram',  GETDATE()     , 8,                   NULL,               NULL,         N'Returned Camp To Teacher')
+
+--==============================================
+
+-- rejected
+
+SET IDENTITY_INSERT [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates] ON
+INSERT [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates] 
+       ([Id], [Code],    [Comment], [ContentAr],                                                                               [ContentEn],[CreatedBy], [CreationDate],[ModificationDate], [ModifiedBy], [Name],                       [TitleAr],          [TitleEn]) 
+VALUES (9,    N'T-1169', NULL,      N'نأسف لإبلاغكم بأن معسكر {0} قد تم رفضه. من فضلك راجع تعليقات فريقنا على المعسكر وحاول نشره مجددًا.', N'We are sorry to inform you that tha camp {0} was rejected, please review our team comments on this camp and try to publish it again', N'Edugram',  GETDATE(),     NULL,               NULL,         N'Rejected Camp To Teacher', N'{0} رفض معسكر', N'{0} camp rejected')
+
+
+INSERT [EduGram.Microservice.MessagingDb].[Messaging].[MessageTypes]       
+       ([Code],         [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) 
+VALUES (N'CM-RJCT-TECH', NULL,      N'Edugram',  GETDATE()     , 9,                   NULL,               NULL,         N'Rejected Camp To Teacher')
+
+
+

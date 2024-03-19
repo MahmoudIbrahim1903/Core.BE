@@ -1,0 +1,4 @@
+﻿  update [O7.Microservice.SmsDb].[Sms].[MessageTemplates]
+  set ContentEn = 'You have a session booked with {0}, on {1} and at {2} {3} {4}.You can visit My Clients to learn more about the client’s background.',
+      ContentAr = 'You have a session booked with {0}, on {1} and at {2} {3} {4}.You can visit My Clients to learn more about the client’s background.'
+  where code = 'TherapistSessionBooked'

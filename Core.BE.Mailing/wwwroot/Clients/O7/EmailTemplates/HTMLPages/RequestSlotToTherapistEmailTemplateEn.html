@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style type="text/css" media="screen">
+        @font-face {
+            font-family: "Quicksand";
+            src: url(../Assets/Fonts/Quicksand-Regular.ttf);
+        }
+
+        body {
+            font-family: Quicksand;
+        }
+
+        /* @font-face {
+                font-family: Raleway;
+                src: url(../Assets/Fonts/Raleway-Regular.ttf);
+            }
+            
+            [style*='Raleway'] {
+                font-family: 'Raleway', Arial, sans-serif !important
+            } */
+    </style>
+</head>
+
+<body style="background:#0EBFB2;">
+    <table width="100%" height cellpadding="0" cellspacing="0" style="font-family:Quicksand;color: black;height: auto;">
+
+        <tr>
+            <td style="width: 38px;"></td>
+            <td style="text-align: center;"> <img
+                    style=" margin: 7px; width: 30px; height: 30px; vertical-align: middle;"
+                    src="../assets/Logo-mail-template.png" alt="">
+            </td>
+            <td style="width: 38px;"></td>
+        </tr>
+
+        <tr>
+            <td> </td>
+            <td style="box-shadow: 10px 10px #0DB2A6; background-color: white;padding: 0 18px;">
+                <div id="header">
+                    <div style="text-align: center; margin-top: 18px;">
+                        <h4>Session Request</h4>
+                    </div>
+                    <div>
+                        <hr style="border-top: 1px solid lightgray">
+                    </div>
+                </div>
+
+                <div id="content">
+                    <p>Dear {{therapistName}}, </p>
+                    </p>A client has requested to book a session with you. Please open slots at your earliest
+                    availability from this button below, and the client will be notified to book immediately. </p>
+
+                    <div style="text-align: center;">
+                        <a href="{{therapistPageLink}}" style="margin: auto;
+                        padding: .7em;
+                        text-decoration: none;
+                        background: #13C2B5;
+                        color: white;
+                        font-size: 12px;
+                        font-weight: bold;
+                        border-radius: 5px;"> O7 Profile</a>
+                    </div>
+                    <br>
+                    <br>
+                    <p>Thank you,<br>O7 Therapy Team</p>
+                </div>
+
+                <div id="footer" style="text-align: center;">
+                    <hr style="border-top: 1px solid lightgray;">
+
+                    <table style="width: 100%;padding: 0;margin: 0;">
+                        <tr style="width: 100%; font-size: 9.3px;">
+                            <td style="width:auto">
+                                <a style="text-decoration: none;color: #0EBFB2;" href="https://o7therapy.com/about-o7/">
+                                    About
+                                    O7 </a>
+                            </td>
+                            <td style="width:auto">
+                                <a style="text-decoration: none;color: #0EBFB2;"
+                                    href="https://web.o7therapy.com/#/therapists/list">
+                                    Therapists </a>
+                            </td>
+                            <td style="width:auto">
+                                <a style="text-decoration: none;color: #0EBFB2;" href="https://o7therapy.com/discover/">
+                                    Discover </a>
+                            </td>
+                            <td style="width:auto">
+                                <a style="text-decoration: none;color: #0EBFB2;" href="https://o7therapy.com/faq/"> FAQ
+                                </a>
+                            </td>
+                            <td style="width:auto">
+                                <a style="text-decoration: none;color: #0EBFB2;"
+                                    href="https://o7therapy.com/contact-us/">
+                                    Contact Us </a>
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="margin: 10px auto;">
+                        <p style="display: inline;">&copy;2020 O7 Therapy </p>
+                    </div>
+                </div>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <ul style="list-style-type: none;text-align: center; overflow: hidden;padding: 0;margin: 20px 0 0 0;">
+                    <li style="display: inline-block;">
+                        <a style="padding: 0 10px;text-decoration: none;"
+                            href="https://www.instagram.com/o7therapy/"><img src="../assets/ic_instagram.png"
+                                alt=""></a>
+                    </li>
+                    <li style="display: inline-block;">
+                        <a style="padding: 0 10px;text-decoration: none;"
+                            href="https://www.facebook.com/O7-Therapy-101015534687442"><img
+                                src="../assets/ic_facebook.png" alt=""></a>
+                    </li>
+                    <li style="display: inline-block;">
+                        <a style="padding: 0 10px;text-decoration: none;"
+                            href="https://www.linkedin.com/company/o7-therapy"><img src="../assets/ic_linkedin.png"
+                                alt=""></a>
+                    </li>
+
+                </ul>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

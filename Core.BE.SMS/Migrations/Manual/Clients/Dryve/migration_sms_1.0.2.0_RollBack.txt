@@ -1,0 +1,4 @@
+=====================DML===================
+
+delete [Dryve.Microservice.SmsDb].[Sms].[MessageTemplates]
+where Code = 'PUB-VCL-O'

@@ -1,0 +1,20 @@
+﻿Update [Sms].[MessageTemplates] 
+Set ContentAr = N'تهانينا! تم التحقق من معسكرك {0}. يرجى إضافة جولات إلى المخيم ونشرها حتى يتمكن الطلاب من البدء في التعلم.' ,
+    ContentEn = 'Congratulations! Your camp {0} has been verified. Please, add rounds to the camp and publish it so that students can start learning.',
+Where Code='CampVerified'
+GO
+
+Update [Sms].[MessageTemplates] 
+Set ContentAr = N'تم إرجاع {0} للحصول على التحديثات. من فضلك ، راجع ملاحظاتنا وأرسلها مرة أخرى.' ,
+    ContentEn = N'{0} is returned for updates. Please, review our feedback and submit again.'
+Where Code='CampReturnedForUpdates'
+GO
+
+
+if exists (select * from [Sms].[MessageTemplates] where code='CampRejected')
+delete from [Sms].[MessageTemplates] where [Code]= 'CampRejected'
+
+if exists (select * from [Sms].[MessageTemplates] where code='CampPublished')
+delete from [Sms].[MessageTemplates] where [Code]= 'CampPublished'
+
+

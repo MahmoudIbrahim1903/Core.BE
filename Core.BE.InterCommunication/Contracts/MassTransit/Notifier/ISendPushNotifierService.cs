@@ -1,0 +1,11 @@
+﻿using Emeint.Core.BE.InterCommunication.Messages;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Emeint.Core.BE.InterCommunication.Contracts.Notifier
+{
+    public interface ISendPushNotifierService : INotifierService<SendNotificationQMesssage>
+    {
+    }
+}

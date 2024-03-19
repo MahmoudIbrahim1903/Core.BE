@@ -1,0 +1,4 @@
+﻿update [Sms].MessageTemplates set ContentAr= N'بناءً على طلبك، رجاءً استخدم هذا الكود {0} لتغيير كلمة المرور الخاصة بك.',
+ContentEn ='Upon your request, please use this code {0} to reset your password' ,
+Code ='ResetPasswordWithOtp'
+where Code='ForgotPassword'

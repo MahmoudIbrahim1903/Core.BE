@@ -1,0 +1,10 @@
+﻿USE [O7.Microservice.MessagingDb]
+GO
+
+UPDATE [Messaging].[MessageTemplates]
+   SET 
+      [ContentEn] = N'Your {0}-minutes session with {1} on {2} and at {3} is confirmed.'
+     
+ WHERE [Name] = 'SessionBookingConfirmedToPatient'
+GO
+

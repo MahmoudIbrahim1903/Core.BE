@@ -1,0 +1,127 @@
+﻿USE [Dryve.Microservice.MessagingDb]
+GO
+SET IDENTITY_INSERT [Messaging].[MessageTypes] ON 
+
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (1, N'TXT', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 1, NULL, NULL, N'Text')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (2, N'BK-SNT', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 2, NULL, NULL, N'Booking request sent')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (3, N'BK-ACP', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 3, NULL, NULL, N'Booking Request Accepted')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (4, N'BK-REJ', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 4, NULL, NULL, N'Booking Request Rejected')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (5, N'BR-CNL-O', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 5, NULL, NULL, N'Booking Request Cancelled by Owner')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (6, N'BR-CNL-D', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 6, NULL, NULL, N'Booking Request Cancelled by Driver')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (7, N'BR-CNF', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 7, NULL, NULL, N'Booking Request Confirmed')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (8, N'TRP-INT', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 30, NULL, NULL, N'Driver Initiated PickUp')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (9, N'TRP-CMP', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 9, NULL, NULL, N'Trip Completed DropOff')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (10, N'TRP-STR-O', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 8, NULL, NULL, N'Owner Started Trip')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (11, N'CAR-ACT', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 11, NULL, NULL, N'Car Activated')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (12, N'CAR-SSP', NULL, N'Nasser', CAST(0x073B84E07C5F433E0B AS DateTime2), 12, NULL, NULL, N'Car Suspended')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (13, N'USR-ACT', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 13, NULL, NULL, N'Account Activated')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (15, N'DRV-L-EXP', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 15, NULL, NULL, N'Driver Driving License Expired')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (16, N'DRV-L-REJ', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 16, NULL, NULL, N'Driver Driving License Rejected')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (17, N'DRV-L-VRF', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 17, NULL, NULL, N'Driver Driving License Verified')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (18, N'CAR-INP-VRF', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 19, NULL, NULL, N'Car Auto Care Verified')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (19, N'CAR-INP-REJ', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 40, NULL, NULL, N'Car Auto Care Rejected')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (20, N'ACC-REP', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 20, NULL, NULL, N'Accident Reported')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (21, N'TRAF-FIN', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 21, NULL, NULL, N'Traffic Fine Reported')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (22, N'PEN-INV-APL', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 22, NULL, NULL, N'Penalty Invoice Applied')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (23, N'VOCHR', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 23, NULL, NULL, N'Voucher')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (24, N'CAR-L-VRF', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 24, NULL, NULL, N'Car License Verified')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (25, N'CAR-L-REJ', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 25, NULL, NULL, N'Car License Rejected')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (26, N'CAR-L-EXP', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 26, NULL, NULL, N'Car License Expired')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (27, N'NAT-VRF', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 27, NULL, NULL, N'National Id Verified')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (28, N'NAT-REJ', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 28, NULL, NULL, N'National Id Rejected')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (29, N'CAR-VRF', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 29, NULL, NULL, N'Car Verified')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (31, N'TRP-STR-D', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 10, NULL, NULL, N'Owner Accept Pickup Driver Started Trip')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (32, N'INS-REJ-O', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 44, NULL, NULL, N'Owner Rejects Pickup Inspection')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (33, N'ACC-REP-D', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 45, NULL, NULL, N'Major accident was reported')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (37, N'CAR-VRF_NAC-VRF', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 42, NULL, NULL, N'Car Verified Nacita Uploaded')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (38, N'USR-VRF_CAR-VRF_NAC-NOT', NULL, N'Nasser', CAST(0x073B84E07C5F433E0B AS DateTime2), 37, NULL, NULL, N'Account Vrified Car Verified Nacita Not Uploaded')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (39, N'USR-VRF_CAR-VRF_NAC-VRF', NULL, N'Nasser', CAST(0x073B84E07C5F433E0B AS DateTime2), 38, NULL, NULL, N'Account Verified Car Verified Nacita Verified')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (45, N'BR-PND-EXP-D', NULL, N'Michael', CAST(0x070000000000A63E0B AS DateTime2), 60, NULL, NULL, N'BookingPendingRequestExpiredDriver')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (46, N'BR-ACP-EXP', NULL, N'Michael', CAST(0x070000000000A63E0B AS DateTime2), 64, NULL, NULL, N'BookingAcceptedRequestExpired')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (49, N'BR-PND-EXP-O', NULL, N'Michael', CAST(0x070000000000A63E0B AS DateTime2), 66, NULL, NULL, N'BookingPendingRequestExpiredOwner')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (1040, N'INS-RET-O', NULL, N'Aya', CAST(0x070000000000B83E0B AS DateTime2), 1050, NULL, NULL, N'Owner Requests Retry Pickup Inspection')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (1041, N'BR-CNL-AD', NULL, N'Nasser', CAST(0x072713143D50C03E0B AS DateTime2), 1052, NULL, NULL, N'Un Paid Booking Request Cancelled By Admin')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (1042, N'CNFRM-BR-CNL-AD', NULL, N'Nasser', CAST(0x072713143D50C03E0B AS DateTime2), 1053, NULL, NULL, N'Paid Booking Request Cancelled By Admin')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (1043, N'CNFRM-BR-CNL-O', NULL, N'Nasser', CAST(0x072713143D50C03E0B AS DateTime2), 1054, NULL, NULL, N'Paid Booking Request Cancelled By Owner')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (1047, N'DRV-DROP-CHRG', NULL, N'Nasser', CAST(0x072713143D50C03E0B AS DateTime2), 1068, NULL, NULL, N'Drop-off invoice (with charges greater than 0) approved by admin
+')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (1049, N'OWN-PAID-DROP-CHRG', NULL, N'Nasser', CAST(0x073B84E07C5FC33E0B AS DateTime2), 1079, NULL, NULL, N'Owner Paid Drop-Off Charges')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (1050, N'OWN-NAT-NOT-RSB', NULL, N'Shaimaa', CAST(0x07805AEFEB6CC63E0B AS DateTime2), 1080, NULL, NULL, N'OwnerNationalIDNotResubmitted')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (1052, N'CAR-L-NOT-RE-SUB', NULL, N'Shaimaa', CAST(0x077056E60B92C63E0B AS DateTime2), 1082, NULL, NULL, N'CarLicenseNotReSubmitted')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (1054, N'CAR-NOT-LST', NULL, N'Shaimaa', CAST(0x0730A0D10A94C63E0B AS DateTime2), 1086, NULL, NULL, N'NoCarListing')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (1056, N'CAR-INP-NOT-SUB', NULL, N'Shaimaa', CAST(0x071089A1EF98C63E0B AS DateTime2), 1087, NULL, NULL, N'AutoCareInspectionNotSubmitted')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (1057, N'CAR-INP-NOT-RE-SUB', NULL, N'Shaimaa', CAST(0x07905A380799C63E0B AS DateTime2), 1088, NULL, NULL, N'AutoCareInspectionNotReSubmitted')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (1058, N'CAR-PEN-VER', NULL, N'Shaimaa', CAST(0x07E0CAEBE299C63E0B AS DateTime2), 1090, NULL, NULL, N'CarPendingVerification')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (1059, N'ADM-END-TRIP-OWN', NULL, N'peter', CAST(0x070000000000C73E0B AS DateTime2), 1091, NULL, NULL, N'AdminEndTripOwner')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (1061, N'ADM-END-TRIP-DRIV', NULL, N'peter', CAST(0x070000000000C73E0B AS DateTime2), 1094, NULL, NULL, N'AdminEndTripDriver')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (1062, N'ADM-END-TRIP', NULL, N'peter', CAST(0x070000000000C73E0B AS DateTime2), 1095, NULL, NULL, N'AdminEndTrip')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (2060, N'USR-RACT-O', NULL, N'Nasser', CAST(0x072713143D50C03E0B AS DateTime2), 2091, NULL, NULL, N'ReActivateOwner')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (2061, N'USR-RACT-D', NULL, N'Nasser', CAST(0x072713143D50C03E0B AS DateTime2), 2101, NULL, NULL, N'ReActivateDriver')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (2062, N'USR-SSP-O', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 2115, NULL, NULL, N'Owner Suspended')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (2063, N'USR-SSP-D', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 2119, NULL, NULL, N'Driver Suspended')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (3059, N'CAR-REACT', NULL, N'Nasser', CAST(0x072713143D50CF3E0B AS DateTime2), 3094, NULL, NULL, N'Car Reactivated
+')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (3064, N'CAR-VRF_NAC-NOT', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 3095, NULL, NULL, N'CarVerified NacitaRequired')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (3066, N'CAR-VRF_NAC-NOT_OPTIONL', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 3096, NULL, NULL, N'CarVerified NacitaOptional')
+GO
+SET IDENTITY_INSERT [Messaging].[MessageTypes] OFF
+GO

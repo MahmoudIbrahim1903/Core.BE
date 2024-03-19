@@ -1,0 +1,27 @@
+﻿USE [O7.Microservice.MessagingDb]
+GO
+SET IDENTITY_INSERT [Messaging].[MessageTypes] ON 
+
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (1, N'TXT', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), 1, NULL, NULL, N'Text')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (2, N'BK-CFRM-PTN', NULL, N'O7', CAST(0x072713143D50423E0B AS DateTime2), 2, NULL, NULL, N'Booking Confirmed')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (3, N'BK-CNCL-PTN', NULL, N'O7', CAST(0x072713143D50423E0B AS DateTime2), 3, NULL, NULL, N'Booking Cancelled')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (4, N'BK-RSCDL-PTN', NULL, N'O7', CAST(0x072713143D50423E0B AS DateTime2), 4, NULL, NULL, N'Booking Rescheduled')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (5, N'NW-BK-THP', NULL, N'O7', CAST(0x072713143D50423E0B AS DateTime2), 5, NULL, NULL, N'New Booking')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (6, N'SSN-CNCL-THP', NULL, N'O7', CAST(0x072713143D50423E0B AS DateTime2), 6, NULL, NULL, N'Session Cancelled')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (7, N'SSN-RSCDL-THP', NULL, N'O7', CAST(0x072713143D50423E0B AS DateTime2), 7, NULL, NULL, N'Session Rescheduled')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (8, N'SSN-RMNDR-THP', NULL, N'O7', CAST(0x072713143D50423E0B AS DateTime2), 8, NULL, NULL, N'Session Reminder')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (9, N'SSN-FIRST-RMNDR-PTN', NULL, N'O7', CAST(0x072713143D50423E0B AS DateTime2), 9, NULL, NULL, N'Patient Session First Reminder')
+GO
+INSERT [Messaging].[MessageTypes] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (10, N'SSN-SECOND-RMNDR-PTN', NULL, N'O7', CAST(0x072713143D50423E0B AS DateTime2), 10, NULL, NULL, N'Patient Session Second Reminder')
+GO
+SET IDENTITY_INSERT [Messaging].[MessageTypes] OFF
+GO

@@ -1,0 +1,7 @@
+﻿
+If not exists (select * from [Sms].[MessageTemplates] where code='StudentLiveLessonAboutToStartReminder')
+INSERT [Sms].[MessageTemplates] 
+       ([Code],                                      [CreationDate], [ModificationDate], [CreatedBy], [ModifiedBy], [Comment], [ContentEn], [ContentAr],                                             [TemplateName]) 
+VALUES (N'StudentLiveLessonAboutToStartReminder', GETDATE(),      NULL,               N'system',   NULL,         NULL,      NULL,         N'خلال ساعة سوف يبدأ اللايف الخاص بك {0} فى معسكر {1}. رجاءً الاستعداد للبدء وتأكد من وجود شبكة انترنت جيدة.
+ ادخل من هنا {2}', N'StudentLiveLessonAboutToStartReminder')
+

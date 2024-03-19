@@ -1,0 +1,2 @@
+﻿if exists (select * from [Sms].MessageTemplates where code='ForgotPassword')
+delete from [Sms].[MessageTemplates] where [Code]= 'ForgotPassword'

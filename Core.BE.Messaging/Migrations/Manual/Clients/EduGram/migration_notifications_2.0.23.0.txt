@@ -1,0 +1,6 @@
+﻿
+
+  update [Messaging].[MessageTemplates]
+  set ContentAr = N'أنت الآن مسجل في المعسكر', ContentEn = 'You are now enrolled in the camp',
+  TitleEn = '{0}', TitleAr = '{0}'
+  where Code = 'T-1122'

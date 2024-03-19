@@ -1,0 +1,8 @@
+﻿USE [EduGram.Microservice.SmsDb]
+GO
+UPDATE [Configuration].[Settings] SET [Group] = N'VictoryLink' where [Key] = N'VictoryLinkSMSUserName'
+GO
+UPDATE [Configuration].[Settings] SET [Group] = N'VictoryLink' where [Key] = N'VictoryLinkSMSPassword'
+GO
+UPDATE [Configuration].[Settings] SET [Group] = N'VictoryLink' where [Key] = N'VictoryLinkSMSSender'
+GO

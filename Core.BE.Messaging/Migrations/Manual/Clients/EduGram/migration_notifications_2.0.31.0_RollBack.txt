@@ -1,0 +1,4 @@
+﻿
+  Update [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates]
+  Set [TitleAr] = N'Your assignment is graded!.'
+  Where [Code] = 'T-1167'

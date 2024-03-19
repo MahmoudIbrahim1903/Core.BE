@@ -1,0 +1,8 @@
+﻿
+If not exists (select * from [EduGram.Microservice.SmsDb].[Sms].[MessageTemplates] where code='RoundStartReminderToTeacher')
+INSERT [EduGram.Microservice.SmsDb].[Sms].[MessageTemplates] 
+       ([Code],                         [CreationDate], [ModificationDate], [CreatedBy], [ModifiedBy], [Comment], [ContentEn], [ContentAr],                                                   [TemplateName]) 
+VALUES (N'RoundStartReminderToTeacher', GETDATE(),      NULL,               N'system',   NULL,         NULL,      NULL,        N'هل أنت مستعد لبداية المعسكر؟ يبدأ معسكر {0} غدًا في {1}.', N'RoundStartReminderToTeacher')
+GO
+
+

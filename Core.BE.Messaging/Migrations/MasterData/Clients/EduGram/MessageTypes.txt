@@ -1,0 +1,3 @@
+﻿
+
+INSERT [Messaging].[MessageTypes] ( [Code], [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) VALUES (N'BK-CFRM-STD', NULL, N'Edugram', CAST(0x072713143D50423E0B AS DateTime2), 2, NULL, NULL, N'Student Booking Confirmed')

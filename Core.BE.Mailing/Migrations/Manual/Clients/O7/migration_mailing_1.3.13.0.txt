@@ -1,0 +1,8 @@
+﻿--AbdelGhaffar
+--DML
+
+
+USE [O7.Microservice.MailingDb]
+
+INSERT INTO [Mailing].[MailTemplates] ([Code],	[Comment]	, [CreatedBy], [CreationDate]	 , [MailType]					,[ModificationDate] ,[ModifiedBy] ,[TemplateNameAr] ,[TemplateNameEn])
+                               VALUES ('MT-11'	 , null     , 'EME'		 ,(select GETDATE()) ,'CancelSessionToPatientEmailType' ,null					,null	   , 'SessionCancelBookingEmailTemplateAr.html'	 ,'SessionCancelBookingEmailTemplateEn.html')

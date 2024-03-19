@@ -1,0 +1,6 @@
+﻿use [EduGram.Microservice.SmsDb]
+If exists (select * from [Sms].[MessageTemplates] where code='TeacherLiveLessonAboutToStartReminder')
+update [Sms].[MessageTemplates] 
+set [ContentAr] = 'خلال ساعة سوف يبدأ اللايف الخاص بك {0} فى معسكر {1}. رجاءً الاستعداد للبدء وتأكد من وجود شبكة انترنت جيدة.
+ ادخل من هنا {2}'
+where code='TeacherLiveLessonAboutToStartReminder'

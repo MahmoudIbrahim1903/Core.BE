@@ -1,0 +1,3 @@
+﻿update [EduGram.Microservice.SmsDb].[Sms].[MessageTemplates]
+set ContentAr = N'مرحبًا بك في Edugram! يرجى استخدام رمز التحقق التالي للتسجيل: {0}'
+where code = 'VerifyPhoneNumber'

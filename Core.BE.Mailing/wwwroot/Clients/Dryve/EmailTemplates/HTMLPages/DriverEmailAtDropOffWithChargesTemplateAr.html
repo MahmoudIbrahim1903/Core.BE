@@ -1,0 +1,191 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body style="margin:0;background-color: #f2f2f2;">
+    <table style="position: relative;width: 100%;height: auto;overflow: hidden;">
+        <tr style="width:100%;">
+            <td style="width:100%;">
+                <table style="width:100%;">
+                    <tbody>
+                        <tr style="width : 100%;">
+                            <td style="width : 100%;">
+                                <div role="banner" style="width: 100%;">
+                                    <h1 style="border-top: 5px solid #e92536;margin-top:0;"></h1>
+                                    <img src="../assets/dryve_logo_red-ar.png" alt="EmailTemplate" style="display: block;margin: 0 auto;width: auto;height: 40px;">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr style="width : 100%;">
+                            <td style="width : 100%;">
+                                <table style="width : 100%;">
+                                    <tbody>
+                                        <tr style="width : 100%;">
+                                            <td style="width : 50%;">
+                                                <div style="width: 100%;text-align:left;float:left">
+                                                    <span style="display:block;">
+                                          <img src="../assets/avatar.png" alt="EmailTemplate">
+                                       </span>
+                                                    <span style="padding-top: 15px;display: block;">
+                                          <img src="../assets/star.png" alt="EmailTemplate">
+                                          <img src="../assets/star.png" alt="EmailTemplate">
+                                          <img src="../assets/star.png" alt="EmailTemplate">
+                                          <img src="../assets/star.png" alt="EmailTemplate">
+                                          <img src="../assets/star.png" alt="EmailTemplate">
+                                       </span>
+                                                </div>
+                                            </td>
+                                            <td style="width : 50%;">
+                                                <div style="display: block;align-content: center;margin: auto;width: 100%;height: auto;direction: rtl;">
+                                                    <div style="font-family: inherit;font-size:35px;float:left;width: 100%;">
+                                                        <p style="font-weight: bold; font-size:20px;width : 100%;">
+                                                            مرحباً {{DriverName}},
+                                                        </p>
+                                                        <p style="width : 100%;">
+                                                            لقد انتهت رحلتك.<br>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr style="width : 100%;">
+                            <td style="width : 100%;">
+                                <p style="direction: rtl;" class="message">
+                                    لقد قمت بتسليم سيارة {{OwnerName}} ال{{VehicleMake}} {{VehicleModel}} يوم {{DropOffDate}} الساعة {{DropOffTime}}.
+                                    <!-- يمكنك الآن تقييم <a href="" style="color: #e92536;text-decoration: none;">رحلتك </a>.<br>  -->
+                                    برجاء العلم أن عليك رسوم نهاية الرحلة كما هو موضح أدناه:
+
+                                </p>
+                            </td>
+                        </tr>
+
+                        <tr style="width : 100%;">
+                            <table style="width : 100%;">
+                                <tbody>
+                                    <tr style="width : 100%;">
+                                        <td style="width : 100%;">
+                                            <table style="width : 100%;direction: rtl;">
+                                                <tbody>
+                                                    <tr style="width : 100%;">
+                                                        <td style="width : 50%;">
+                                                            <span style="font-weight: bold;">مدة الإيجار: </span>
+                                                        </td>
+                                                        <td style="width : 50%;">
+                                                            <span>{{RentalPeriodDays}} يوم/أيام</span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr style="width : 100%;">
+                                        <td style="width : 100%;">
+                                            <table style="width : 100%;direction: rtl;">
+                                                <tbody>
+                                                    <tr style="width : 100%;">
+                                                        <td style="width : 50%;">
+                                                            <span style="font-weight: bold;">رسوم الإيجار التي تم دفعها: </span>
+                                                        </td>
+                                                        <td style="width : 50%;">
+                                                            <span>{{TotalRentalEarnings}} ج.م.</span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr style="width : 100%">
+                                        <td style="width : 100%;">
+                                            <div style="width: 100%;margin-top: 20px;background-color: white;direction: rtl;">
+                                                <strong> رسوم عند التسليم </strong>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr style="width : 100%;">
+            <td style="width : 100%;">
+                <table style="width : 100%; direction: rtl;">
+                    {{DriverInvoiceLines}}
+                </table>
+            </td>
+        </tr>
+        <tr style="width : 100%;">
+            <td style="width : 100%;">
+                <div style="width: 100%;margin-bottom: 10px; margin-top: 20px;direction: rtl;">
+                    يرجى سداد رسوم التسليم في خلال 24 ساعة. لن تستطيع تقديم طلبات حجز إضافية أو بداية رحلة أخرى إلّا بعد سداد هذه الرسوم.
+                    <br> إذا كان لديك أي أسئلة عن كيفية السداد، تفحص
+                    <a href="https://www.getdryve.com/faq" style="color: #e92536;text-decoration: none;">الأسئلة الشائعة</a> أو تواصل مع <a href="https://www.getdryve.com/contact-us" style="color: #e92536;text-decoration: none;">فريق درايڤ
+                  مباشرة</a>
+
+                </div>
+            </td>
+        </tr>
+        <tr style="width:100%;">
+            <td style="width:100%;">
+                <div style="padding: 90px 20px 20px 20px;display: grid;width:100%;">
+                    <div>
+                        <div style="width: 100%;height: 16em;text-align:  center;">
+                            <p style="font-style: italic;text-align: center;text-align: -webkit-center;">
+                                <br>مازلت غير متأكد كيف يعمل درايف؟
+                                <!-- شاهد <a href="" style="color: #e92536;text-decoration: none;">الفيديو التعليمي</a> او -->
+                                تفحص <a href="https://www.getdryve.com/faq" style="color: #e92536;text-decoration: none;">الأسئله
+                           المتكررة</a><br> إذا كانت لديك أي أسئلة أخرى <a href="https://www.getdryve.com/contact-us" style="color: #e92536;text-decoration:  none;">اتصل بنا</a><br> يسعدنا مساعدتك دائماً!
+                            </p>
+                            <p style="font-weight: bold;margin-top: 40px;"> درايف على موبايلك</p>
+                            <a href="https://itunes.apple.com/eg/app/dryve/id1341448775?mt=8"><img src="../assets/Download_on_the_App_Store_Badge_AR_RGB_blk_102417.png" alt="EmailTemplate" style="width: 23%;margin-bottom: 9px;text-align: center"></a>
+                            <a href="https://play.google.com/store/apps/details?id=com.eme.Dryve"><img src="../assets/google-play-badge-ar.png" alt="EmailTemplate" style="width: 25%;margin-bottom: 9px;text-align: center"></a>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr style="width:100%;">
+            <td style="width:100%;">
+                <div style="background-color: #e92536;position:relative;width:100%;height: 15%;">
+                    <div>
+                        <table style="width:100%;padding: 20px 20px;">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <a href="https://www.facebook.com/dryveEgypt/"><img src="../assets/footer_facebook_white.png" alt="EmailTemplate" style="margin: 0 auto;display: block;"></a>
+                                    </td>
+                                    <td>
+                                        <a href="https://www.twitter.com/dryveEgypt/"><img src="../assets/footer_twitter_white.png" alt="EmailTemplate" style="margin: 0 auto;display: block;"></a>
+                                    </td>
+                                    <td>
+                                        <a href="https://www.instagram.com/dryve.Egypt/"><img src="../assets/footer_instagram_white.png" alt="EmailTemplate" style="margin: 0 auto;display: block;"></a>
+                                    </td>
+                                    <td>
+                                        <a href="https://www.linkedin.com/company/dryvegypt/"><img src="../assets/footer_linkedin_white.png" alt="EmailTemplate" style="margin: 0 auto;display: block;"></a>
+                                    </td>
+                                    <td>
+                                        <a href="https://www.youtube.com/channel/UCgySzEFjQu25bw7d_TEBWEw/"><img src="../assets/footer_youtube_white.png" alt="EmailTemplate" style="margin: 0 auto;display: block;"></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="padding: 20px 30% 40px 30%;text-align: center;direction: rtl;">
+                        <a href="https://www.getdryve.com/contact-us" style="text-decoration: none;color:  white;padding-left: 10px;padding-right: 0px;font-size: 18;">اتصل
+                     بنا</a>
+                        <!-- <a href="#about" style="text-decoration: none;color: white;font-size: 18;padding: 0px 10px 0px 0px;">الغاء اشتراك</a> -->
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

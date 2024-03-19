@@ -1,0 +1,8 @@
+﻿
+IF EXISTS (select * from [Messaging].[MessageTemplates] where [Code] ='T-1144')
+BEGIN
+  Update [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates]
+  Set [ContentEn] = N'Your round of {0} is about to start.',
+      [ContentAr] = N'دورتك في {0} على وشك البدء.'
+  Where [Code] = 'T-1144'
+END

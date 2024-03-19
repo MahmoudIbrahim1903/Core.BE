@@ -1,0 +1,13 @@
+
+﻿
+SET IDENTITY_INSERT [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates] ON
+INSERT [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates] 
+       ([Id], [Code],    [Comment], [ContentAr],                                                                               [ContentEn],[CreatedBy], [CreationDate],[ModificationDate], [ModifiedBy], [Name],                       [TitleAr],          [TitleEn]) 
+VALUES (7,    N'T-1167', NULL,      N'تم الآن تقييم واجبك {0} في {1} .', N'Your assignment {0} in {1} is now graded .', N'Edugram',  GETDATE(),     NULL,               NULL,         N'Assignment Graded To Student', N'Your assignment is graded!', N'Your assignment is graded!')
+SET IDENTITY_INSERT [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates] off
+
+INSERT [EduGram.Microservice.MessagingDb].[Messaging].[MessageTypes] 
+       ([Code],         [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name])   
+VALUES (N'CM-SUB-GRD-STD', NULL,      N'Edugram',  GETDATE()     , 7,                   NULL,               NULL,         N'Assignment Graded To Student')
+
+

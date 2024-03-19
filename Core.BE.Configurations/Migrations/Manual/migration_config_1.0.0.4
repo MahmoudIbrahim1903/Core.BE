@@ -1,0 +1,52 @@
+﻿--- =========== DDL ==================
+--=====================================
+use [Dryve.Microservice.MailingDb]
+go
+alter table [Configuration].[Settings]
+add DisplayName nvarchar(MAX)
+go
+
+use [Dryve.Microservice.MessagingDb]
+go
+alter table [Configuration].[Settings]
+add DisplayName nvarchar(MAX)
+go
+
+
+
+
+
+use [Dryve.Microservice.MailingDb]
+go
+alter table [Configuration].[Settings]
+add Description nvarchar(MAX)
+go
+
+use [Dryve.Microservice.MessagingDb]
+go
+alter table [Configuration].[Settings]
+add Description nvarchar(MAX)
+go
+
+
+
+
+
+
+use [Dryve.Microservice.MailingDb]
+go
+alter table [Configuration].[Settings]
+add ShowInPortal bit 
+CONSTRAINT default_show DEFAULT 1
+WITH VALUES
+go
+
+
+use [Dryve.Microservice.MessagingDb]
+go
+alter table [Configuration].[Settings]
+add ShowInPortal bit 
+CONSTRAINT default_show DEFAULT 1
+WITH VALUES
+go
+

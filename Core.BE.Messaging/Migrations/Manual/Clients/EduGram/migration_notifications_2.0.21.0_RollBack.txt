@@ -1,0 +1,3 @@
+﻿
+delete from [EduGram.Microservice.MessagingDb].[Messaging].[MessageTypes] where code = 'RUN-RMNDR-STD'
+delete from [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates] where name = 'RoundStartReminderToStudent'

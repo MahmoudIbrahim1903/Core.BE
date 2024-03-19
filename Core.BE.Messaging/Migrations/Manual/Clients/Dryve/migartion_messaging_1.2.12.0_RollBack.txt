@@ -1,0 +1,4 @@
+﻿ IF  EXISTS (select * from [Configuration].[Settings] where [key] ='FirebaseCredentialsFilePath')
+   BEGIN
+     delete from [Configuration].[Settings] where [key] = 'FirebaseCredentialsFilePath' 
+   END  

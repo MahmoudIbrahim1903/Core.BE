@@ -1,0 +1,11 @@
+﻿
+IF EXISTS (select * from [Messaging].[MessageTemplates] where [Code] ='T-1166')
+BEGIN
+  Update [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates]
+  Set [TitleEn] = N'Your camp {0} is now verified.',
+      [TitleAr] = N'لقد تم قبول معسكركم {0} وهو الآن جاهز للنشر.',
+      [ContentEn] = N'Please, add rounds to publish the camp for students.',
+      [ContentAr] = N'من فضلك، أضف مواعيد الدورات القادمة في المعسكر وانشره حتى يبدأ طلابك في التعلم.',
+	  [Name] = N'Approved Camp To Teacher'
+  Where [Code] = 'T-1166'
+END

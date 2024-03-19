@@ -1,0 +1,31 @@
+﻿--======== DML Staging =================
+--======================================
+
+
+USE [Dryve.Microservice.MessagingDb]
+GO
+SET IDENTITY_INSERT [Configuration].[Settings] ON 
+GO
+INSERT [Configuration].[Settings] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value], [DisplayName], [Description], [ShowInPortal]) VALUES (4, N'mc-4', NULL, N'dryve', CAST(N'2018-03-12T00:00:00.0000000' AS DateTime2), NULL, NULL, N'NotificationHubConnectionString', NULL, NULL, NULL, NULL, 0, 2, N'SET_KEY', NULL, NULL, 1)
+GO
+INSERT [Configuration].[Settings] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value], [DisplayName], [Description], [ShowInPortal]) VALUES (5, N'mc-5', NULL, N'dryve', CAST(N'2018-03-12T00:00:00.0000000' AS DateTime2), NULL, NULL, N'NotificationHubPath', NULL, NULL, NULL, NULL, 0, 2, N'DryveHub', NULL, NULL, 1)
+GO
+SET IDENTITY_INSERT [Configuration].[Settings] OFF
+GO
+
+-----======================================
+
+--======== DML Production =================
+--=========================================
+
+
+USE [Dryve.Microservice.MessagingDb]
+GO
+SET IDENTITY_INSERT [Configuration].[Settings] ON 
+GO
+INSERT [Configuration].[Settings] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value], [DisplayName], [Description], [ShowInPortal]) VALUES (4, N'mc-4', NULL, N'dryve', CAST(N'2018-03-12T00:00:00.0000000' AS DateTime2), NULL, NULL, N'NotificationHubConnectionString', NULL, NULL, NULL, NULL, 0, 2, N'Endpoint=sb://dryvenamespacee.servicebus.windows.net/;SharedAccessKeyName=DefaultFullSharedAccessSignature;SharedAccessKey=ztipcpX60Wv2xhGSKB0Q3l59mxQf/fg4HayD8zkZYbQ=', NULL, NULL, 1)
+GO
+INSERT [Configuration].[Settings] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value], [DisplayName], [Description], [ShowInPortal]) VALUES (5, N'mc-5', NULL, N'dryve', CAST(N'2018-03-12T00:00:00.0000000' AS DateTime2), NULL, NULL, N'NotificationHubPath', NULL, NULL, NULL, NULL, 0, 2, N'DryveProductionHub', NULL, NULL, 1)
+GO
+SET IDENTITY_INSERT [Configuration].[Settings] OFF
+GO

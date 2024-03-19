@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Emeint.Core.BE.SMS</name>
+    </assembly>
+    <members>
+        <member name="T:Emeint.Core.BE.SMS.Domain.Enums.SmsErrorCodes">
+            <summary>
+            From 700 to 799
+            </summary>
+        </member>
+        <member name="T:EZagelServiceReference.Provider">
+            <remarks/>
+        </member>
+        <member name="P:EZagelServiceReference.Provider.Provider_ID">
+            <remarks/>
+        </member>
+        <member name="P:EZagelServiceReference.Provider.User_ID">
+            <remarks/>
+        </member>
+        <member name="P:EZagelServiceReference.Provider.Provider_Name">
+            <remarks/>
+        </member>
+        <member name="P:EZagelServiceReference.Provider.Prefix">
+            <remarks/>
+        </member>
+        <member name="P:EZagelServiceReference.Provider.File_Spool">
+            <remarks/>
+        </member>
+        <member name="P:EZagelServiceReference.Provider.Spool_Path">
+            <remarks/>
+        </member>
+        <member name="P:EZagelServiceReference.Provider.Receive_Path">
+            <remarks/>
+        </member>
+        <member name="P:EZagelServiceReference.Provider.Force_Sender">
+            <remarks/>
+        </member>
+        <member name="P:EZagelServiceReference.Provider.Sent_Path">
+            <remarks/>
+        </member>
+        <member name="P:EZagelServiceReference.Provider.Bad_Path">
+            <remarks/>
+        </member>
+        <member name="T:VictoryLinkResellerServiceReference.Item">
+            <remarks/>
+        </member>
+        <member name="P:VictoryLinkResellerServiceReference.Item.value">
+            <remarks/>
+        </member>
+        <member name="P:VictoryLinkResellerServiceReference.Item.key">
+            <remarks/>
+        </member>
+    </members>
+</doc>

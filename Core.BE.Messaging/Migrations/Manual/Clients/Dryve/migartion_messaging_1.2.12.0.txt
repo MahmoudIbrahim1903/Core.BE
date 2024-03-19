@@ -1,0 +1,6 @@
+﻿ IF NOT EXISTS (select * from [Configuration].[Settings] where [key] ='FirebaseCredentialsFilePath')
+   BEGIN
+      INSERT [Configuration].[Settings] 
+	  ([Code],                                  [Comment],  [CreatedBy], [CreationDate],                                     [Group],      [Key],                         [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [User], [Value],                  [SettingType], [EnumTypeName], [DisplayName], [Description], [ShowInPortal], [UnitOfMeasure])
+	  VALUES ( N'mc-FirebaseCredentialsFilePath', NULL,      N'ahmedm',   CAST(N'2019-06-11T00:00:00.0000000' AS DateTime2), N'Messaging', N'FireBaseCredentialsFilePath', NULL,     NULL,      NULL,                NULL,           2,    N'./Credentials/{{json file_name}}', 0,            NULL,           NULL,           NULL,          0,             null)
+   END  

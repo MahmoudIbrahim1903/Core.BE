@@ -1,0 +1,3 @@
+﻿
+delete from [EduGram.Microservice.MessagingDb].[Messaging].[MessageTypes] where code = 'BK-CNCL-STD'
+delete from [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates] where name = 'CampBookingCancelledToStudent'

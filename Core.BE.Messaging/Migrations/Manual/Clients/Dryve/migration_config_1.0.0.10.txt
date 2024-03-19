@@ -1,0 +1,4 @@
+﻿--========== DDL =========
+
+alter table [Configuration].[Settings]
+add  UnitOfMeasure nvarchar(MAX)

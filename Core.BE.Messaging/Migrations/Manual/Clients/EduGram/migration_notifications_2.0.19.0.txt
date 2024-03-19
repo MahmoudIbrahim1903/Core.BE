@@ -1,0 +1,13 @@
+﻿
+SET IDENTITY_INSERT [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates] ON
+INSERT [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates] 
+       ([Id], [Code],    [Comment], [ContentAr],                                                                                                                       [ContentEn],                                                                                                  [CreatedBy], [CreationDate],[ModificationDate], [ModifiedBy], [Name],                          [TitleAr],           [TitleEn]) 
+VALUES (3,    N'T-1133', NULL,      N'لقد تجاوزت المدة المسموح بها لإتمام الدفع والاشتراك في المعسكر. يمكنك الذهاب للمعسكر ومحاولة الاشتراك مرة أخرى إذا أردت.', N'Your booking has been cancelled because you missed the payment. Try again now, if you still want to join.', N'Edugram',  GETDATE(),     NULL,               NULL,         N'CampBookingCancelledToStudent', N'تم الغاء الحجز', N'Your Booking Has Been Cancelled')
+SET IDENTITY_INSERT [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates] off
+
+
+INSERT [EduGram.Microservice.MessagingDb].[Messaging].[MessageTypes]       
+       ([Code],         [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) 
+VALUES (N'BK-CNCL-STD', NULL,      N'Edugram',  GETDATE()     , 3,                   NULL,               NULL,         N'Student Booking Cancelled')
+
+

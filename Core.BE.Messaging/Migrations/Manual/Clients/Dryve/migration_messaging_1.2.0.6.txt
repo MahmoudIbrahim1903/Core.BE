@@ -1,0 +1,28 @@
+﻿-- Samar
+
+------- DML
+begin
+ IF NOT EXISTS (SELECT [key] FROM  [Dryve.Microservice.MessagingDb].[Messaging].[MessageTemplates] where Code= 'T-121994')
+INSERT INTO [Dryve.Microservice.MessagingDb].[Messaging].[MessageTemplates] (Code, ContentAr,ContentEn , CreatedBy ,CreationDate, [Name], TitleAr , TitleEn)
+VALUES ('T-121994', N'لقد تم إصدار فاتورة سداد بمبلغ {0} جم لحسابك. يرجى سداد هذا المبلغ في خلال 48 ساعة لتجنب الغرامات',
+'A billing invoice for EGP {0} has been added to your account. Please make sure to settle this amount within 48 hours to avoid surcharges',
+'Samar', GETDATE(),'فاتورة سداد',N'','Billing Invoice');
+end
+GO
+
+INSERT INTO [Dryve.Microservice.MessagingDb].[Messaging].[MessageTypes] (Code,CreatedBy,CreationDate,MessageTemplateId,[Name])
+VALUES ('BILLING-INVOICE','Samar',GETDATE(),scope_identity(),'Billing Invoice')
+
+
+
+begin
+ IF NOT EXISTS (SELECT [key] FROM  [Dryve.Microservice.MessagingDb].[Messaging].[MessageTemplates] where Code= 'T-121995')
+INSERT INTO [Dryve.Microservice.MessagingDb].[Messaging].[MessageTemplates] (Code, ContentAr,ContentEn , CreatedBy ,CreationDate, [Name], TitleAr , TitleEn)
+VALUES ('T-121995', N'لقد تم إصدار فاتورة دخل بمبلغ {0} جم لحسابك',
+'An earnings invoice for EGP {0} has been added to your account',
+'Samar', GETDATE(),'فاتورة دخل',N'','Earnings Invoice');
+end
+GO
+
+INSERT INTO [Dryve.Microservice.MessagingDb].[Messaging].[MessageTypes] (Code,CreatedBy,CreationDate,MessageTemplateId,[Name])
+VALUES ('EARNINGS-INVOICE','Samar',GETDATE(),scope_identity(),'Earnings Invoice')

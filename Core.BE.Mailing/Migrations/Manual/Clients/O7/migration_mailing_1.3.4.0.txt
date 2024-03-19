@@ -1,0 +1,8 @@
+﻿--peter
+--DML
+
+
+USE [O7.Microservice.MailingDb]
+
+INSERT INTO [Mailing].[MailTemplates] ([Code],	[Comment]	, [CreatedBy], [CreationDate]	 , [MailType]					,[ModificationDate] ,[ModifiedBy] ,[TemplateNameAr] ,[TemplateNameEn])
+                               VALUES ('MT-8'	 , null     , 'EME'		 ,(select GETDATE()) ,'SessionConfirmBookingToTherapistEmailType' ,null					,null	   , 'SessionCofirmBookingToTherapistEmailTemplateAr.html'	 ,'SessionCofirmBookingToTherapistEmailTemplateEn.html')

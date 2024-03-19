@@ -1,0 +1,13 @@
+﻿
+SET IDENTITY_INSERT [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates] ON
+INSERT [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates] 
+       ([Id], [Code],    [Comment], [ContentAr],                    [ContentEn],                         [CreatedBy], [CreationDate],[ModificationDate], [ModifiedBy], [Name],                       [TitleAr],          [TitleEn]) 
+VALUES (5,    N'T-1155', NULL,      N'علق المدرس على {0} في {1}.', N'Teacher commented on {0} in {1}.', N'Edugram',  GETDATE(),     NULL,               NULL,         N'TeacherCommentedOnLessonToStudent', N'تعليقات جديدة', N'New comments')
+SET IDENTITY_INSERT [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates] off
+
+
+INSERT [EduGram.Microservice.MessagingDb].[Messaging].[MessageTypes]       
+       ([Code],         [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) 
+VALUES (N'TEC-COM-STD', NULL,      N'Edugram',  GETDATE()     , 5,                   NULL,               NULL,         N'Teacher commented on lesson to student')
+
+

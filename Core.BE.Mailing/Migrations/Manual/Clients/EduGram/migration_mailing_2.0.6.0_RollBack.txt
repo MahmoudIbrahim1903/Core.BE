@@ -1,0 +1,25 @@
+﻿USE [EduGram.Microservice.MailingDb]
+BEGIN
+   IF EXISTS (select * from [Mailing].[MailTemplates] where [MailType] ='CreateTeacherVerificationEmailType')
+   BEGIN
+   DELETE FROM [Mailing].[MailTemplates] WHERE [MailType] ='CreateTeacherVerificationEmailType'
+   END
+END
+GO
+
+BEGIN
+   IF EXISTS (select * from [Configuration].[Settings] where [key] ='Assets')
+   BEGIN
+   DELETE FROM [Configuration].[Settings] WHERE [key] ='Assets'
+   END
+END
+	
+GO
+
+
+BEGIN
+   IF EXISTS (select * from [Configuration].[Settings] where [key] ='HtmlPath')
+   BEGIN
+   DELETE FROM [Configuration].[Settings] WHERE [key] ='HtmlPath'
+   END
+END

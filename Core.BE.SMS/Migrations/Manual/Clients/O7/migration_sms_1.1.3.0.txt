@@ -1,0 +1,4 @@
+﻿
+if not exists (select * from [Sms].MessageTemplates where code='TherapistSessionRescheduled')
+INSERT [Sms].[MessageTemplates] ([Code], [CreationDate], [ModificationDate], [CreatedBy], [ModifiedBy], [Comment], [ContentEn], [ContentAr], [TemplateName]) VALUES (N'TherapistSessionRescheduled', CAST(N'2020-03-29T00:00:00.0000000' AS DateTime2), NULL, N'system', NULL, NULL, N'Your session booked with {0}, is confirmed to be rescheduled to {1} and at {2} {3} .', N'Your session booked with {0}, is confirmed to be rescheduled to {1} and at {2} {3} .', N'TherapistSessionRescheduled')
+GO

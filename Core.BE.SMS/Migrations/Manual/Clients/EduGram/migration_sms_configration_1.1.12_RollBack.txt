@@ -1,0 +1,3 @@
+﻿USE [EduGram.Microservice.SmsDb]
+GO
+DELETE FROM [Configuration].[Settings] WHERE [Group] = N'VictoryLink'

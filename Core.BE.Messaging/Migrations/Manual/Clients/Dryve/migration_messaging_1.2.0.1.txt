@@ -1,0 +1,5 @@
+﻿INSERT INTO [Dryve.Microservice.MessagingDb].[Messaging].[MessageTemplates] (Code, ContentAr,ContentEn , CreatedBy ,CreationDate, [Name], TitleAr , TitleEn)
+VALUES ('T-122336', N'لقد تم التحقق من ونشر جميع سياراتك ال', 'pending verified vehicles are published.','Samar', GETDATE(),'OwnerVehiclesAutoPublished',N'تم نشر سياراتك التى تم التحقق منها','Vehicles Auto Published');
+
+INSERT INTO [Dryve.Microservice.MessagingDb].[Messaging].[MessageTypes] (Code,CreatedBy,CreationDate,MessageTemplateId,[Name])
+VALUES ('O-V-Auto-PUB','Samar',GETDATE(),scope_identity(),'Vehicles Auto Published')

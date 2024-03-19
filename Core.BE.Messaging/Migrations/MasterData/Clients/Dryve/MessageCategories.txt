@@ -1,0 +1,6 @@
+﻿SET IDENTITY_INSERT [Messaging].[MessageCategories] ON 
+
+INSERT [Messaging].[MessageCategories] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [ModificationDate], [ModifiedBy], [Name]) VALUES (1, N'CHAT-MSG', NULL, N'Nasser', CAST(0x072713143D50423E0B AS DateTime2), NULL, NULL, N'Chat_Message')
+INSERT [Messaging].[MessageCategories] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [ModificationDate], [ModifiedBy], [Name]) VALUES (2, N'SERVR-MSG', NULL, N'Nasser', CAST(0x073B84E07C5F433E0B AS DateTime2), NULL, NULL, N'Server_Message')
+INSERT [Messaging].[MessageCategories] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [ModificationDate], [ModifiedBy], [Name]) VALUES (3, N'ADMIN-MSG', NULL, N'Nasser', CAST(0x073B84E07C5F433E0B AS DateTime2), NULL, NULL, N'Admin_Message')
+SET IDENTITY_INSERT [Messaging].[MessageCategories] OFF

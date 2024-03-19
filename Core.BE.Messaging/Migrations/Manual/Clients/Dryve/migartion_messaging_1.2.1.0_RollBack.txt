@@ -1,0 +1,4 @@
+﻿ IF  EXISTS (select * from [Configuration].[Settings] where [key] ='ImagesRootFolder')
+   BEGIN
+      delete from [Configuration].[Settings] where [key] ='ImagesRootFolder'
+   END

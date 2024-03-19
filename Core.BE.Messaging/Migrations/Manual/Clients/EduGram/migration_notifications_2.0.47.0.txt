@@ -1,0 +1,23 @@
+﻿  update [Configuration].[Settings]
+  set ShowInPortal = 1, DisplayName = 'Notification Hub Connection String', [Group] = 'Messaging'
+  where [Key] = 'NotificationHubConnectionString'
+
+  update [Configuration].[Settings]
+  set ShowInPortal = 1, DisplayName = 'Notification Hub Path', [Group] = 'Messaging'
+  where [Key] = 'NotificationHubPath'
+
+  update [Configuration].[Settings]
+  set ShowInPortal = 1, DisplayName = 'Enable White List', [Group] = 'Messaging'
+  where [Key] = 'EnableWhiteList'
+
+  update [Configuration].[Settings]
+  set ShowInPortal = 1, DisplayName = 'White List', [Group] = 'Messaging'
+  where [Key] = 'WhiteList'
+
+  update [Configuration].[Settings]
+  set ShowInPortal = 1, DisplayName = 'Message Delay Value', [Group] = 'Messaging'
+  where [Key] = 'MessageDelayValue'
+
+  update [Configuration].[Settings]
+  set ShowInPortal = 1, DisplayName = 'Firebase Web Credentials File Path', [Group] = 'Messaging'
+  where [Key] = 'FirebaseWebCredentialsFilePath'

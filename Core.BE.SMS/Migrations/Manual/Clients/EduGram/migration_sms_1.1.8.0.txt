@@ -1,0 +1,4 @@
+﻿
+if not exists (select * from [Sms].MessageTemplates where code='VerifyPhoneNumber')
+INSERT [Sms].[MessageTemplates] ([Code], [CreationDate], [ModificationDate], [CreatedBy], [ModifiedBy], [Comment], [ContentEn], [ContentAr], [TemplateName]) VALUES (N'VerifyPhoneNumber', CAST(N'2020-04-28T00:00:00.0000000' AS DateTime2), NULL, N'system', NULL, NULL, N'Welcome to Edugram! Please use the following verification code to sign up: {0}.', N'Welcome to Edugram! Please use the following verification code to sign up: {0}.', N'VerifyPhoneNumber')
+GO

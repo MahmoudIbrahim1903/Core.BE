@@ -1,0 +1,13 @@
+﻿
+SET IDENTITY_INSERT [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates] ON
+INSERT [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates] 
+       ([Id], [Code],    [Comment], [ContentAr],                                                                               [ContentEn],[CreatedBy], [CreationDate],[ModificationDate], [ModifiedBy], [Name],                       [TitleAr],          [TitleEn]) 
+VALUES (6,    N'T-1166', NULL,      N'لقد تحققنا من معسكركم {0} وهو الآن جاهز للنشر. من فضلك، أضف مواعيد الدورات القادمة في المعسكر وانشره حتى يبدأ طلابك في التعلم.', N'We have verified from your camp {0}, and it is ready to be published. please add new round times to this camp', N'Edugram',  GETDATE(),     NULL,               NULL,         N'Aproved Camp To Teacher', N'{0} تأكيد معسكر', N'{0} camp verification')
+SET IDENTITY_INSERT [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates] off
+
+
+INSERT [EduGram.Microservice.MessagingDb].[Messaging].[MessageTypes]       
+       ([Code],         [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) 
+VALUES (N'CM-APRV-TECH', NULL,      N'Edugram',  GETDATE()     , 6,                   NULL,               NULL,         N'Aproved Camp To Teacher')
+
+

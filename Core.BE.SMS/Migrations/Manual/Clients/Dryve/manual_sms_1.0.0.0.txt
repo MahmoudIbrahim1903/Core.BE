@@ -1,0 +1,53 @@
+﻿--===============
+-- DML 
+--Aya
+--===============
+
+SET IDENTITY_INSERT [Sms].[MessageTemplates] ON 
+GO
+INSERT [Sms].[MessageTemplates] ([Code], [CreationDate], [ModificationDate], [CreatedBy], [ModifiedBy], [Comment], [Id], [ContentAr], [ContentEn], [TemplateName]) VALUES (N'TXT', CAST(N'2018-05-21T11:07:06.1971225' AS DateTime2), NULL, N'dryve', NULL, NULL, 1, N'{0}', N'{0}', N'Text')
+GO
+INSERT [Sms].[MessageTemplates] ([Code], [CreationDate], [ModificationDate], [CreatedBy], [ModifiedBy], [Comment], [Id], [ContentAr], [ContentEn], [TemplateName]) VALUES (N'BK-SNT', CAST(N'2018-05-21T09:34:22.2109479' AS DateTime2), NULL, N'dryve', NULL, NULL, 2, N'{0} طلب حجز سيارتك {1} فى الفترة من {2} الى {3} ', N'{0} wants to rent your {1} from {2} to {3}', N'BookingRequestSent')
+GO
+INSERT [Sms].[MessageTemplates] ([Code], [CreationDate], [ModificationDate], [CreatedBy], [ModifiedBy], [Comment], [Id], [ContentAr], [ContentEn], [TemplateName]) VALUES (N'BK-ACP', CAST(N'2018-05-21T09:34:22.2109479' AS DateTime2), NULL, N'dryve', NULL, NULL, 3, N'قام {0} بقبول طلبك لحجز سيارته ال{1} من {2} الى {3}. لديك الآن {4} ساعة للدفع.', N'{0} has accepted your request to book their {1} from {2} to {3}. You now have {4} hours to pay.', N'BookingRequestAccepted')
+GO
+INSERT [Sms].[MessageTemplates] ([Code], [CreationDate], [ModificationDate], [CreatedBy], [ModifiedBy], [Comment], [Id], [ContentAr], [ContentEn], [TemplateName]) VALUES (N'BR-CNL-D', CAST(N'2018-05-21T09:34:22.2109479' AS DateTime2), NULL, N'dryve', NULL, NULL, 4, N'{0} ألغي حجز سيارتك ال{1} فى المدة من {2} الى {3}', N'{0} has cancelled his request to book your {1} from {2} to {3}', N'BookingRequestCancelledByDriver')
+GO
+INSERT [Sms].[MessageTemplates] ([Code], [CreationDate], [ModificationDate], [CreatedBy], [ModifiedBy], [Comment], [Id], [ContentAr], [ContentEn], [TemplateName]) VALUES (N'BR-CNF-O', CAST(N'2018-05-22T11:23:31.6981819' AS DateTime2), NULL, N'dryve', NULL, NULL, 5, N'تم الدفع والتأكيد على طلب حجز سيارتك ال{0}. يمكنك الآن الاتصال بـ {1} لترتيب التسليم!', N'The booking request for your {0} has been paid for and is confirmed. You can now call {1} and arrange pick-up!', N'BookingRequestConfirmedOwner')
+GO
+INSERT [Sms].[MessageTemplates] ([Code], [CreationDate], [ModificationDate], [CreatedBy], [ModifiedBy], [Comment], [Id], [ContentAr], [ContentEn], [TemplateName]) VALUES (N'BR-CNF-D', CAST(N'2018-10-24T15:57:21.5316799' AS DateTime2), NULL, N'dryve', NULL, NULL, 6, N'تم دفع رسوم إيجار سيارة {0} ال{1} بنجاح. تبدأ رحلتك {2}.', N'Rental charges for {0}''s {1} have been processed successfully. Your trip starts on {2}.', N'ConfirmedBookingToDriver')
+GO
+INSERT [Sms].[MessageTemplates] ([Code], [CreationDate], [ModificationDate], [CreatedBy], [ModifiedBy], [Comment], [Id], [ContentAr], [ContentEn], [TemplateName]) VALUES (N'BK-ACP_OTHR-CNL', CAST(N'2018-11-04T14:20:26.9419862' AS DateTime2), NULL, N'dryve', NULL, NULL, 7, N'قام {0} بقبول طلبك لحجز سيارته ال{1} من {2} إلى {3}. لديك الآن {4} ساعة للدفع. يرجى ملاحظة أن طلباتك لنفس الفترة قد تم إلغاؤها تلقائيًا.', N'{0} has accepted your request to book their {1} from {2} to {3}. You now have {4} hours to pay. Please note that all your requests for the same period have been automatically canceled.', N'Booking_Request_Accepted_Other_Requests_Cancelled')
+GO
+INSERT [Sms].[MessageTemplates] ([Code], [CreationDate], [ModificationDate], [CreatedBy], [ModifiedBy], [Comment], [Id], [ContentEn], [ContentAr], [TemplateName]) VALUES (N'VR-PN', CAST(N'2018-04-04T00:00:00.0000000' AS DateTime2), NULL, N'dryve', NULL, NULL, 8, N'Your Dryve phone number activation code is: {0}', N' {0} كود تفعيل رقم المحمول الخاص بك', N'PhoneNumberVerified')
+GO
+INSERT [Sms].[MessageTemplates] ([Code], [CreationDate], [ModificationDate], [CreatedBy], [ModifiedBy], [Comment], [Id], [ContentEn], [ContentAr], [TemplateName]) VALUES (N'RS-PW', CAST(N'2018-04-04T00:00:00.0000000' AS DateTime2), NULL, N'dryve', NULL, NULL,9 , N'Your new password is: {0} ', N'كلمة المرور الجديدة: {0}', N'NewPassword')
+GO
+SET IDENTITY_INSERT [Sms].[MessageTemplates] OFF
+GO
+
+
+SET IDENTITY_INSERT [Configuration].[Settings] ON 
+GO
+INSERT [Configuration].[Settings] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value], [Description], [DisplayName], [ShowInPortal], [UnitOfMeasure]) VALUES (1, N'sc-1', NULL, N'dryve', CAST(N'2019-02-25T00:00:00.0000000' AS DateTime2), NULL, N'SMS', N'VictoryLinkSMSPassword', NULL, NULL, NULL, NULL, 0, 2, N'n4Wqdlf21m', NULL, N'SMS Password', 0, NULL)
+GO
+INSERT [Configuration].[Settings] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value], [Description], [DisplayName], [ShowInPortal], [UnitOfMeasure]) VALUES (2, N'sc-2', NULL, N'dryve', CAST(N'2019-02-25T00:00:00.0000000' AS DateTime2), NULL, N'SMS', N'VictoryLinkSMSSender', NULL, NULL, NULL, NULL, 0, 2, N'Dryve', NULL, N'SMS Password', 0, NULL)
+GO
+INSERT [Configuration].[Settings] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value], [Description], [DisplayName], [ShowInPortal], [UnitOfMeasure]) VALUES (3, N'sc-3', NULL, N'dryve', CAST(N'2019-02-25T00:00:00.0000000' AS DateTime2), NULL, N'SMS', N'VictoryLinkSMSUserName', NULL, NULL, NULL, NULL, 0, 2, N'Dryve', NULL, N'SMS Password', 0, NULL)
+GO
+INSERT [Configuration].[Settings] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value], [Description], [DisplayName], [ShowInPortal], [UnitOfMeasure]) VALUES (4, N'sc-1', NULL, N'dryve', CAST(N'2019-02-25T00:00:00.0000000' AS DateTime2), NULL, N'SMS', N'EzagelSMSPassword', NULL, NULL, NULL, NULL, 0, 2, N'n4Wqdlf21m', NULL, N'SMS Password', 0, NULL)
+GO
+INSERT [Configuration].[Settings] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value], [Description], [DisplayName], [ShowInPortal], [UnitOfMeasure]) VALUES (5, N'sc-2', NULL, N'dryve', CAST(N'2019-02-25T00:00:00.0000000' AS DateTime2), NULL, N'SMS', N'EZagelSMSSender', NULL, NULL, NULL, NULL, 0, 2, N'Dryve', NULL, N'SMS Password', 0, NULL)
+GO
+INSERT [Configuration].[Settings] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value], [Description], [DisplayName], [ShowInPortal], [UnitOfMeasure]) VALUES (6, N'sc-3', NULL, N'dryve', CAST(N'2019-02-25T00:00:00.0000000' AS DateTime2), NULL, N'SMS', N'EzagelSMSUserName', NULL, NULL, NULL, NULL, 0, 2, N'Dryve', NULL, N'SMS Password', 0, NULL)
+GO
+INSERT [Configuration].[Settings] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value], [Description], [DisplayName], [ShowInPortal], [UnitOfMeasure]) VALUES (7, N'sc-4', NULL, N'dryve', CAST(N'2019-02-25T00:00:00.0000000' AS DateTime2), NULL, N'SMS', N'TwilioAccountSId', NULL, NULL, NULL, NULL, 0, 2, N'ACd6bc397b01081e1e3e652e9f46191cba', NULL, N'SMS Password', 0, NULL)
+GO
+INSERT [Configuration].[Settings] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value], [Description], [DisplayName], [ShowInPortal], [UnitOfMeasure]) VALUES (8, N'sc-5', NULL, N'dryve', CAST(N'2019-02-25T00:00:00.0000000' AS DateTime2), NULL, N'SMS', N'TwilioAuthToken', NULL, NULL, NULL, NULL, 0, 2, N'6212480720cd3e7db8bd34ec5dd9c28e', NULL, N'SMS Password', 0, NULL)
+GO
+INSERT [Configuration].[Settings] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value], [Description], [DisplayName], [ShowInPortal], [UnitOfMeasure]) VALUES (9, N'sc-6', NULL, N'dryve', CAST(N'2019-02-25T00:00:00.0000000' AS DateTime2), NULL, N'SMS', N'TwilioFromPhoneNumber', NULL, NULL, NULL, NULL, 0, 2, N'+12132143149', NULL, N'SMS Password', 0, NULL)
+GO
+SET IDENTITY_INSERT [Configuration].[Settings] OFF
+GO
+
+

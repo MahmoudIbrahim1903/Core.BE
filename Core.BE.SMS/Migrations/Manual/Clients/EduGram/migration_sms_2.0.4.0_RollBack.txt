@@ -1,0 +1,4 @@
+﻿update [Sms].MessageTemplates set ContentAr= N'بناءً على طلبك، إليك كلمة المرور الجديدة {0}.',
+ConetentEn = 'Upon your request, your new password is {0}',
+Code= 'ForgotPassword'
+where Code='ResetPasswordWithOtp'

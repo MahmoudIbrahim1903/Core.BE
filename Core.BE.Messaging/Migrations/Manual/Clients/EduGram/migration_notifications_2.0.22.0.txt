@@ -1,0 +1,6 @@
+﻿
+  Update [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates]
+  Set [TitleAr] = N'سيبدأ المعسكر في {0}.',
+      [TitleEn] = N'Camp Starts at {0}.'
+  Where [name] = 'RoundStartReminderToStudent'
+

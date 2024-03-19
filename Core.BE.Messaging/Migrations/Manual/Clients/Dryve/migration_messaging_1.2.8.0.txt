@@ -1,0 +1,7 @@
+﻿--DML
+--Aya
+
+UPDATE [Messaging].MessageTemplates 
+SET ContentEn=N'Your {0}''s inspection report has been uploaded. Verification takes up to 24 hours.',
+ContentAr=N'تم تحميل نتائج فحص سيارتك ال{0} بنجاح. عملية التحقق تستغرق ما يصل إلى 24 ساعة.' 
+WHERE [Name]='CarAutoCareVerified'

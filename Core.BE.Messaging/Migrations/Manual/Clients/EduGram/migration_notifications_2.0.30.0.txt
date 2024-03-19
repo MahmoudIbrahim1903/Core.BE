@@ -1,0 +1,15 @@
+﻿
+  Update [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates]
+  Set [TitleEn] = N'Camp Joined Successfully.',
+      [TitleAr] = N'يمكنك الآن بدء رحلة التعلم الخاصة بك.',
+      [ContentEn] = N'Now you can start your learning.',
+      [ContentAr] = N'لقد انضممت للمعسكر بنجاح.'
+  Where [Code] = 'T-1122'
+
+  
+  Update [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates]
+  Set [TitleEn] = N'Your booking for {0} has been cancelled.',
+      [TitleAr] = N'.{0} تم إلغاء الحجز في معسكر',
+      [ContentEn] = N'Your booking has been cancelled because you missed the payment. Try again now, if you still want to join.',
+      [ContentAr] = N'لقد تجاوزت المدة المسموح بها لإتمام الدفع والاشتراك في المعسكر.'
+  Where [Code] = 'T-1133'

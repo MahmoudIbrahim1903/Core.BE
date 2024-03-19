@@ -1,0 +1,4 @@
+﻿
+SET IDENTITY_INSERT [Messaging].[MessageTemplates] ON
+INSERT [Messaging].[MessageTemplates] ([Id], [Code], [Comment], [ContentAr], [ContentEn], [CreatedBy], [CreationDate], [ModificationDate], [ModifiedBy], [Name], [TitleAr], [TitleEn]) VALUES (2, N'T-1122', NULL, N'يمكنك الآن بدء رحلة التعلم الخاصة بك.', N'You can start camp now.', N'Edugram', CAST(N'2018-05-21 09:34:22.2109479' AS DateTime2), NULL, NULL, N'CampBookingConfirmedToStudent', N'لقد انضممت للمعسكر بنجاح', N'Booking Confirmed')
+SET IDENTITY_INSERT [Messaging].[MessageTemplates] off

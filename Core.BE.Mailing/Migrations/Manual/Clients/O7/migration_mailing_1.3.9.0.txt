@@ -1,0 +1,7 @@
+﻿--AbdelGhaffar
+--DML
+
+
+USE [O7.Microservice.MailingDb]
+
+update [Mailing].[MailTemplates] set [MailType] = 'CreateTherapistVerificationEmailType' where MailType = 'CreateTherapistVerificationEmailTemplate'

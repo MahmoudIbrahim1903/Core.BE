@@ -1,0 +1,36 @@
+﻿--AbdelGhaffar
+--DML
+
+USE [O7.Microservice.MailingDb]
+
+INSERT INTO [Mailing].[MailTemplates] ([Code],	[Comment]	, [CreatedBy], [CreationDate]	 , [MailType]								 ,[ModificationDate] ,[ModifiedBy] ,[TemplateNameAr] ,[TemplateNameEn])
+                               VALUES ('MT-1'	 , null     , 'EME'		 ,(select GETDATE()) ,'CreateTherapistVerificationEmailType' ,null					,null	   ,'VerifyTherapistEmailTemplateAr.html'	 ,'VerifyTherapistEmailTemplateEn.html')
+GO
+
+BEGIN
+   IF NOT EXISTS (select * from [Configuration].[Settings] where [key] ='Assets')
+   BEGIN
+		INSERT INTO [Configuration].[Settings] ([Code] ,[CreationDate]		,[ModificationDate] ,[CreatedBy] ,[ModifiedBy] ,[Comment] ,[Key]	,[Value]							 ,[Group] , [Minimum] ,[Maximum] ,[User], [SettingType] ,[EnumTypeName] ,[DisplayName] ,[Description] ,[ShowInPortal] ,[UnitOfMeasure])
+										VALUES ('S-1'  ,(select GetDate())  ,NULL				,'EME'		 ,NULL		   ,NULL	  ,'Assets'	,'src="http://o7admin.emeint.com/'   ,'System', NULL	  ,NULL		 ,2		, 0				,NULL			,'Assets'	   ,'Assets'	  ,0			  ,NULL)
+	END
+END
+	
+GO
+
+
+BEGIN
+   IF NOT EXISTS (select * from [Configuration].[Settings] where [key] ='HtmlPath')
+   BEGIN
+		INSERT INTO [Configuration].[Settings] ([Code] ,[CreationDate]		,[ModificationDate] ,[CreatedBy] ,[ModifiedBy] ,[Comment] ,[Key]		,[Value]							 ,[Group] , [Minimum] ,[Maximum] ,[User], [SettingType] ,[EnumTypeName] ,[DisplayName] ,[Description] ,[ShowInPortal] ,[UnitOfMeasure])
+										VALUES ('S-2'  ,(select GetDate())	,NULL				,'EME'		,NULL			,NULL	  ,'HtmlPath'	,'/Clients/O7/EmailTemplates/HTMLPages/'     ,'System'	,NULL	  ,NULL      ,2		  ,0			,NULL			,'Html Path'	,'Html Path'  ,0			  ,NULL)
+	END
+END
+	
+BEGIN
+    IF NOT EXISTS (select * from [Configuration].[Settings] where [key] ='SendGrid:apiKey')
+   BEGIN
+		INSERT INTO [Configuration].[Settings] ([Code] ,[CreationDate]		,[ModificationDate] ,[CreatedBy] ,[ModifiedBy] ,[Comment] ,[Key]			 ,[Value]																	,[Group]  ,[Minimum] ,[Maximum] ,[User] ,[SettingType] ,[EnumTypeName] ,[DisplayName]		,[Description]		,[ShowInPortal] ,[UnitOfMeasure])
+										VALUES ('S-3'  ,(select GetDate())  ,NULL				,'EME'		 ,NULL			,NULL	  ,'SendGrid:apiKey' ,'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'   ,'System' ,NULL		 ,NULL      ,2	    ,0				,NULL			,'SendGrid:apiKey'  ,'SendGrid apiKey'  ,0				,NULL)
+	END
+END
+GO

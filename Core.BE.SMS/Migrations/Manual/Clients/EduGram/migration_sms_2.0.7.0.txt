@@ -1,0 +1,11 @@
+﻿
+if not exists (select * from [Sms].MessageTemplates where code='CampVerified')
+INSERT [Sms].[MessageTemplates] ([Code], [CreationDate], [ModificationDate], [CreatedBy], [ModifiedBy], [Comment], [ContentEn], [ContentAr], [TemplateName]) VALUES (N'CampVerified', GETDATE(), NULL, N'system', NULL, NULL, N'Congratulations! Your camp {0} has been verified. Please, add rounds to the camp and publish it so that students can start learning.', N'تهانينا! تم التحقق من معسكرك {0}. يرجى إضافة جولات إلى المخيم ونشرها حتى يتمكن الطلاب من البدء في التعلم.', N'CampVerified')
+GO
+
+if not exists (select * from [Sms].MessageTemplates where code='CampReturnedForUpdates')
+INSERT [Sms].[MessageTemplates] ([Code], [CreationDate], [ModificationDate], [CreatedBy], [ModifiedBy], [Comment], [ContentEn], [ContentAr], [TemplateName]) VALUES (N'CampReturnedForUpdates', GETDATE(), NULL, N'system', NULL, NULL, N'{0} is returned for updates. Please, review our feedback and submit again.', N'تم إرجاع {0} للحصول على التحديثات. من فضلك ، راجع ملاحظاتنا وأرسلها مرة أخرى.', N'CampReturnedForUpdates')
+GO
+
+
+

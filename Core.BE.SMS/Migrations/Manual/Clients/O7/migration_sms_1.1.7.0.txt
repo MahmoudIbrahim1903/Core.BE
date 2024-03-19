@@ -1,0 +1,18 @@
+﻿update [O7.Microservice.SmsDb].[Sms].[MessageTemplates]
+set ContentEn = 'You have a session booked with {0}, on {1} at {2} {3} {4}.
+You can visit My Clients to learn more about the client’s background.',
+ContentAr = 'You have a session booked with {0}, on {1} at {2} {3} {4}.
+You can visit My Clients to learn more about the client’s background.'
+where code = 'TherapistSessionBooked'
+
+update [O7.Microservice.SmsDb].[Sms].[MessageTemplates]
+set ContentEn = 'This is a kind reminder that your session with {0} scheduled on {1} at {2} {3} is soon taking place.',
+ContentAr = 'This is a kind reminder that your session with {0} scheduled on {1} at {2} {3} is soon taking place.'
+where code = 'TherapistSessionAboutToStart'
+
+update [O7.Microservice.SmsDb].[Sms].[MessageTemplates]
+set ContentEn = 'Your session booked with {0}, is confirmed to be rescheduled to {1} at {2} {3} .',
+ContentAr = 'Your session booked with {0}, is confirmed to be rescheduled to {1} at {2} {3} .'
+where code = 'TherapistSessionRescheduled'
+
+

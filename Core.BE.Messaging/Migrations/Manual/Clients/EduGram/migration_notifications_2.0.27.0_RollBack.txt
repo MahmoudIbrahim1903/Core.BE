@@ -1,0 +1,3 @@
+﻿
+delete from [EduGram.Microservice.MessagingDb].[Messaging].[MessageTypes] where code = 'TEC-COM-STD'
+delete from [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates] where name = 'Aproved Camp To Teacher'

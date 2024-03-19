@@ -1,0 +1,9 @@
+﻿if exists (select * from [O7.Microservice.SmsDb].[Sms].MessageTemplates where code='SessionCanceled')
+
+UPDATE [Sms].[MessageTemplates]
+   SET [ContentEn] = N'Your request to cancel your session with {0}, scheduled on {1} at {2} is accepted.
+Please browse through our  therapists’ list to book another session. Thank you for using O7 Therapy!',
+      [ContentAr] = N'Your request to cancel your session with {0}, scheduled on {1} at {2} is accepted. 
+Please browse through our therapists’ list to book another session. Thank you for using O7 Therapy!'
+ WHERE [TemplateName] = 'SessionCanceled'
+GO

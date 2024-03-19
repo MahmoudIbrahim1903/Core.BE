@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Emeint.Core.BE.Notifications</name>
+    </assembly>
+    <members>
+        <member name="M:Emeint.Core.BE.Notifications.API.Controllers.Admin.AdminMessagingController.Send(Emeint.Core.BE.Notifications.API.Application.ValueObjects.Admin.AdminSendNotificationRequestVm)">
+            <summary>
+            Send Admin message to driver or owner
+            </summary>
+            <response code="200 (error_code=1)">Internal Server Error</response>
+            <response code="200 (error_code=110)">Send Message Failed</response>
+        </member>
+        <member name="M:Emeint.Core.BE.Notifications.API.Controllers.Admin.AdminMessagingController.GetNotifications(System.Nullable{Emeint.Core.BE.Notifications.Domain.Enums.SortBy},System.Nullable{Emeint.Core.BE.Domain.Enums.SortDirection},System.Int32,System.Int32)">
+            <summary>
+            Get notifications
+            </summary>
+            <response code="200 (error_code=1)">Internal Server Error</response>
+            <response code="200 (error_code=110)">Get Messages Failed</response>
+        </member>
+        <member name="M:Emeint.Core.BE.Notifications.API.Controllers.Admin.AdminMessagingController.GetMessageDetails(Emeint.Core.BE.Notifications.API.Application.ValueObjects.Admin.AdminMessageDetailsRequestViewModel)">
+            <summary>
+            Get message details
+            </summary>
+            <response code="200 (error_code=1)">Internal Server Error</response>
+            <response code="200 (error_code=110)">Get Message details Failed</response>
+        </member>
+        <member name="M:Emeint.Core.BE.Notifications.API.Controllers.EndUser.NotificationsController.UpdateNotificationsStatusV1(System.Collections.Generic.List{Emeint.Core.BE.Notifications.API.Application.ValueObjects.EndUser.UpdateMessageStatusViewModel})">
+            <summary>
+            Update notifications status for driver or owner - DEPRECATED
+            </summary>
+            <response code="200 (error_code=1)">Internal Server Error</response>
+            <response code="200 (error_code=402)">Update Notification Status Failed</response>
+        </member>
+        <member name="M:Emeint.Core.BE.Notifications.API.Controllers.EndUser.NotificationsController.UpdateNotificationsStatusV2(System.Collections.Generic.List{Emeint.Core.BE.Notifications.API.Application.ValueObjects.EndUser.UpdateMessageStatusViewModelV2})">
+            <summary>
+            Update notifications status for driver or owner
+            </summary>
+            <response code="200 (error_code=1)">Internal Server Error</response>
+            <response code="200 (error_code=402)">Update Notification Status Failed</response>
+        </member>
+        <member name="M:Emeint.Core.BE.Notifications.API.Controllers.EndUser.NotificationsController.MarkAllAsRead">
+            <summary>
+            Update notifications status to read
+            </summary>
+        </member>
+        <member name="M:Emeint.Core.BE.Notifications.API.Controllers.EndUser.NotificationsController.GetNotificationsV1(System.Nullable{Emeint.Core.BE.Notifications.Domain.Enums.SortBy},System.Nullable{Emeint.Core.BE.Domain.Enums.SortDirection},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{Emeint.Core.BE.Notifications.Domain.Enums.Direction},System.Nullable{System.Int32},Emeint.Core.BE.Domain.Enums.Language)">
+            <summary>
+            Get Received notifications for end user - DEPRECATED
+            </summary>
+            <response code="200 (error_code=1)">Internal Server Error</response>
+            <response code="200 (error_code=110)">Get Notifications Failed</response>
+        </member>
+        <member name="M:Emeint.Core.BE.Notifications.API.Controllers.EndUser.NotificationsController.GetNotificationsV2(System.Nullable{Emeint.Core.BE.Notifications.Domain.Enums.SortBy},System.Nullable{Emeint.Core.BE.Domain.Enums.SortDirection},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{Emeint.Core.BE.Notifications.Domain.Enums.Direction},System.Nullable{System.Int32},Emeint.Core.BE.Domain.Enums.Language)">
+            <summary>
+            Get Received notifications for end user
+            </summary>
+            <response code="200 (error_code=1)">Internal Server Error</response>
+            <response code="200 (error_code=110)">Get Notifications Failed</response>
+        </member>
+        <member name="M:Emeint.Core.BE.Notifications.API.Controllers.EndUser.NotificationsController.GetUnreadNotificationsCountV1">
+            <summary>
+            Get Count of UnRead notifications  - DEPRECATED
+            </summary>
+            <response code="200 (error_code=1)">Internal Server Error</response>
+            <response code="200 (error_code=110)">Get Notifications Count Failed</response>
+        </member>
+        <member name="M:Emeint.Core.BE.Notifications.API.Controllers.EndUser.NotificationsController.GetUnreadNotificationsCountV2">
+            <summary>
+            Get Count of UnRead notifications 
+            </summary>
+            <response code="200 (error_code=1)">Internal Server Error</response>
+            <response code="200 (error_code=110)">Get Notifications Count Failed</response>
+        </member>
+        <member name="M:Emeint.Core.BE.Notifications.API.Controllers.EndUser.NotificationsController.RegisterForPush(Emeint.Core.BE.Notifications.API.Application.ValueObjects.EndUser.RegisterForPushViewModel,System.String,System.String)">
+            <summary>
+            register user with his device platform // TODO handle anonymous users, so null in user id is not handled
+            </summary>
+            <response code="200 (error_code=1)">Internal Server Error</response>
+            <response code="200 (error_code=400)">Register User Failed</response>
+            <response code="200 (error_code=401)">Invalid User Id</response>
+        </member>
+        <member name="M:Emeint.Core.BE.Notifications.API.Controllers.EndUser.NotificationsController.UnRegisterFromPushProvider">
+            <summary>
+            Unregister form Push Notification provider
+            </summary>
+            <response code="200 (error_code=1)">Internal Server Error</response>
+            <response code="200 (error_code=110)">Send Message Failed</response>
+        </member>
+        <member name="M:Emeint.Core.BE.Notifications.API.Controllers.EndUser.NotificationsController.DeleteNotification(System.Int32)">
+            <summary>
+             delete notification
+            </summary>
+            <param name="notification_id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Emeint.Core.BE.Notifications.API.Controllers.Server.ExternalNotificationsController.Send(Emeint.Core.BE.Notifications.API.Application.ValueObjects.External.ExternalMessageViewModel)">
+            <summary>
+            Send Notification from server event
+            </summary>
+            <response code="200 (error_code=1)">Internal Server Error</response>
+            <response code="200 (error_code=110)">Send Notification Failed</response>
+        </member>
+        <member name="M:Emeint.Core.BE.Notifications.API.Controllers.Server.ServerNotificationsController.Send(Emeint.Core.BE.Notifications.API.Application.ValueObjects.Server.SystemEventNotificationDto)">
+            <summary>
+            Send notification from server event
+            </summary>
+            <response code="200 (error_code=1)">Internal Server Error</response>
+            <response code="200 (error_code=110)">Send Notification Failed</response>
+        </member>
+        <member name="T:Emeint.Core.BE.Notifications.Domain.Enums.MessagingErrorCodes">
+            <summary>
+            From 200 to 299
+            </summary>
+        </member>
+    </members>
+</doc>

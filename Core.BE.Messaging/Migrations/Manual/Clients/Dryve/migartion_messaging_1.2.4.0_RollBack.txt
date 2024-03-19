@@ -1,0 +1,29 @@
+================DML==================
+
+  update [Dryve.Microservice.MessagingDb].[Configuration].[Settings]
+  set [Group] = null
+
+
+  update [Dryve.Microservice.MessagingDb].[Configuration].[Settings]
+  set [DisplayName] = null
+  where [Key] = 'EnableWhiteList'
+
+  update [Dryve.Microservice.MessagingDb].[Configuration].[Settings]
+  set [DisplayName] = null
+  where [Key] = 'WhiteList'
+
+  update [Dryve.Microservice.MessagingDb].[Configuration].[Settings]
+  set [DisplayName] = null
+  where [Key] = 'MessageDelayValue'
+
+  update [Dryve.Microservice.MessagingDb].[Configuration].[Settings]
+  set [DisplayName] = null
+  where [Key] = 'NotificationHubConnectionString'
+
+  update [Dryve.Microservice.MessagingDb].[Configuration].[Settings]
+  set [DisplayName] = null
+  where [Key] = 'NotificationHubPath'
+
+  update [Dryve.Microservice.MessagingDb].[Configuration].[Settings]
+  set [DisplayName] = null
+  where [Key] = 'ImagesRootFolder'

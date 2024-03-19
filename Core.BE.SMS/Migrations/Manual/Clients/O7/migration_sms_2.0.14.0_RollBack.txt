@@ -1,0 +1,5 @@
+﻿USE [O7.Microservice.SmsDb]
+GO
+if exists (select * from [Sms].MessageTemplates where code='PatientSessionAboutToStart')
+delete from [Sms].[MessageTemplates] where [Code]= 'PatientSessionAboutToStart'
+GO

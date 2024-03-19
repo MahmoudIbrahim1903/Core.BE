@@ -1,0 +1,51 @@
+﻿--Samar
+--DML
+
+
+BEGIN
+   IF NOT EXISTS (select * from [Mailing].[MailTemplates] where [MailType] ='OwnerEmailAtPickupTemplate')
+   BEGIN
+   INSERT [Mailing].[MailTemplates] ([Code], [Comment], [CreatedBy], [CreationDate], [MailType], [ModificationDate], [ModifiedBy], [TemplateNameAr], [TemplateNameEn]) VALUES ( N'MT-125', NULL, N'Samar', CAST(N'2019-05-20 00:00:00.0000000' AS DateTime2), N'OwnerEmailAtPickupTemplate', NULL, NULL, N'OwnerEmailAtPickupTemplateAr.html', N'OwnerEmailAtPickupTemplate.html')
+   END
+END
+GO
+BEGIN
+   IF NOT EXISTS (select * from [Mailing].[MailTemplates] where [MailType] ='DriverEmailAtPickupTemplate')
+   BEGIN
+   INSERT [Mailing].[MailTemplates] ([Code], [Comment], [CreatedBy], [CreationDate], [MailType], [ModificationDate], [ModifiedBy], [TemplateNameAr], [TemplateNameEn]) VALUES ( N'MT-126', NULL, N'Samar', CAST(N'2019-06-09 00:00:00.0000000' AS DateTime2), N'DriverEmailAtPickupTemplate', NULL, NULL, N'DriverEmailAtPickupTemplateAr.html', N'DriverEmailAtPickupTemplate.html')
+   END
+END
+GO
+
+
+BEGIN
+   IF NOT EXISTS (select * from [Mailing].[MailTemplates] where [MailType] ='OwnerEmailAtDropOffTemplate')
+   BEGIN
+   INSERT [Mailing].[MailTemplates] ([Code], [Comment], [CreatedBy], [CreationDate], [MailType], [ModificationDate], [ModifiedBy], [TemplateNameAr], [TemplateNameEn]) VALUES ( N'MT-127', NULL, N'Samar', CAST(N'2019-05-20 00:00:00.0000000' AS DateTime2), N'OwnerEmailAtDropOffTemplate', NULL, NULL, N'OwnerEmailAtDropOffTemplateAr.html', N'OwnerEmailAtDropOffTemplate.html')
+   END
+END
+GO
+BEGIN
+   IF NOT EXISTS (select * from [Mailing].[MailTemplates] where [MailType] ='DriverEmailAtDropOffTemplate')
+   BEGIN
+   INSERT [Mailing].[MailTemplates] ([Code], [Comment], [CreatedBy], [CreationDate], [MailType], [ModificationDate], [ModifiedBy], [TemplateNameAr], [TemplateNameEn]) VALUES ( N'MT-128', NULL, N'Samar', CAST(N'2019-06-09 00:00:00.0000000' AS DateTime2), N'DriverEmailAtDropOffTemplate', NULL, NULL, N'DriverEmailAtDropOffTemplateAr.html', N'DriverEmailAtDropOffTemplate.html')
+   END
+END
+GO
+
+
+
+BEGIN
+   IF NOT EXISTS (select * from [Mailing].[MailTemplates] where [MailType] ='DriverEmailAtDropOffWithChargesTemplate')
+   BEGIN
+   INSERT [Mailing].[MailTemplates] ([Code], [Comment], [CreatedBy], [CreationDate], [MailType], [ModificationDate], [ModifiedBy], [TemplateNameAr], [TemplateNameEn]) VALUES ( N'MT-127', NULL, N'Samar', CAST(N'2019-05-20 00:00:00.0000000' AS DateTime2), N'DriverEmailAtDropOffWithChargesTemplate', NULL, NULL, N'DriverEmailAtDropOffWithChargesTemplateAr.html', N'DriverEmailAtDropOffWithChargesTemplate.html')
+   END
+END
+GO
+BEGIN
+   IF NOT EXISTS (select * from [Mailing].[MailTemplates] where [MailType] ='OwnerEmailAtDropOffWithChargesTemplate')
+   BEGIN
+   INSERT [Mailing].[MailTemplates] ([Code], [Comment], [CreatedBy], [CreationDate], [MailType], [ModificationDate], [ModifiedBy], [TemplateNameAr], [TemplateNameEn]) VALUES ( N'MT-128', NULL, N'Samar', CAST(N'2019-06-09 00:00:00.0000000' AS DateTime2), N'OwnerEmailAtDropOffWithChargesTemplate', NULL, NULL, N'OwnerEmailAtDropOffWithChargesTemplateAr.html', N'OwnerEmailAtDropOffWithChargesTemplate.html')
+   END
+END
+GO

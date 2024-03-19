@@ -1,0 +1,9 @@
+﻿
+delete from [EduGram.Microservice.MessagingDb].[Messaging].[MessageTypes] where code = 'CM-RTFU-TECH'
+delete from [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates] where name = 'Returned Camp To Teacher'
+
+--=====
+
+delete from [EduGram.Microservice.MessagingDb].[Messaging].[MessageTypes] where code = 'CM-RJCT-TECH'
+delete from [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates] where name = 'Rejected Camp To Teacher'
+

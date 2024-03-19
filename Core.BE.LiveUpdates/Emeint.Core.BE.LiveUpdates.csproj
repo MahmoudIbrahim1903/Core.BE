@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>cf9e4c66-0e0e-4661-bde7-e4fd8c7e6d9b</UserSecretsId>
+    <AssemblyVersion>2.0.4.0</AssemblyVersion>
+    <FileVersion>2.0.4.0</FileVersion>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IdentityServer4.AccessTokenValidation" Version="2.0.1" />
+    <PackageReference Include="MassTransit.Extensions.DependencyInjection" Version="5.3.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.0" />
+    <PackageReference Include="Microsoft.Azure.SignalR" Version="1.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core.BE.Cache\Core.BE.Cache\Emeint.Core.BE.Cache.csproj" />
+    <ProjectReference Include="..\Core.BE.Configurations\Emeint.Core.BE.Configurations.csproj" />
+    <ProjectReference Include="..\Core.BE.InterCommunication\Emeint.Core.BE.InterCommunication.csproj" />
+    <ProjectReference Include="..\Core.BE.Media\Emeint.Core.BE.Media.csproj" />
+  </ItemGroup>
+
+
+</Project>

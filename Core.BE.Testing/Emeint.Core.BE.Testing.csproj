@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <!--<RuntimeFrameworkVersion>2.2.0</RuntimeFrameworkVersion>-->
+
+    <IsPackable>false</IsPackable>
+
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+
+    <FileVersion>3.0.0.0</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NetCore.App" Version="2.2.8" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
+    <PackageReference Include="Moq" Version="4.10.1" />
+    <PackageReference Include="xunit" Version="2.4.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core.BE\Emeint.Core.BE.csproj" />
+  </ItemGroup>
+
+</Project>

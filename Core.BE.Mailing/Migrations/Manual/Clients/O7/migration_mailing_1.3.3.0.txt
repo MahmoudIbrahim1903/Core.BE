@@ -1,0 +1,14 @@
+--peter
+--DML
+
+
+USE [O7.Microservice.MailingDb]
+
+INSERT INTO [Mailing].[MailTemplates] ([Code],	[Comment]	, [CreatedBy], [CreationDate]	 , [MailType]					,[ModificationDate] ,[ModifiedBy] ,[TemplateNameAr] ,[TemplateNameEn])
+                               VALUES ('MT-6'	 , null     , 'EME'		 ,(select GETDATE()) ,'ReferralMail' ,null					,null	   ,'ReferralEmailTemplateAr.html'	 ,'ReferralEmailTemplateEn.html')
+
+
+USE [O7.Microservice.MailingDb]
+
+INSERT INTO [Mailing].[MailTemplates] ([Code],	[Comment]	, [CreatedBy], [CreationDate]	 , [MailType]					,[ModificationDate] ,[ModifiedBy] ,[TemplateNameAr] ,[TemplateNameEn])
+                               VALUES ('MT-7'	 , null     , 'EME'		 ,(select GETDATE()) ,'MultipleReferralMail' ,null					,null	   ,'MultipleReferralEmailTemplateAr.html'	 ,'MultipleReferralEmailTemplateEn.html')

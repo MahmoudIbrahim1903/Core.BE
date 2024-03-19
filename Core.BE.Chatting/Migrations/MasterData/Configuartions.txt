@@ -1,0 +1,5 @@
+
+INSERT [Configuration].[Settings] ( [Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value]) VALUES (N'mc-1', NULL, N'o7', CAST(GETDATE() AS DateTime2), NULL, NULL, N'SendbirdToken', NULL, NULL, NULL, NULL, 0, 2, N'3c4da39edc33fbdb05b8439efcb037c362050a4f')
+GO
+INSERT [Configuration].[Settings] ( [Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value]) VALUES (N'mc-2', NULL, N'o7', CAST(GETDATE() AS DateTime2), NULL, NULL, N'SendbirdAppId', NULL, NULL, NULL, NULL, 0, 2, N'BE0C6DDA-9B50-4A82-BA31-109C3CD14BC0')
+GO

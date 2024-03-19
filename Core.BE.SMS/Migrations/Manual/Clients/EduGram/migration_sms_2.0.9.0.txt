@@ -1,0 +1,26 @@
+﻿Update [Sms].[MessageTemplates] 
+Set ContentAr = N'لقد تحققنا من معسكركم {0} وهو الآن جاهز للنشر. من فضلك، أضف مواعيد الدورات القادمة في المعسكر وانشره حتى يبدأ طلابك في التعلم.',
+    ContentEn = NULL
+Where Code = 'CampVerified'
+GO
+
+Update [Sms].[MessageTemplates] 
+Set ContentAr = N'الرجاء مراجعة تعليقاتنا على معسكر {0} واتخاذ الإجراءات المطلوبة حتى يمكنك نشره.' ,
+    ContentEn = NULL
+Where Code='CampReturnedForUpdates'
+GO
+
+
+
+If not exists (select * from [Sms].[MessageTemplates] where code='CampRejected')
+INSERT [Sms].[MessageTemplates] 
+       ([Code],          [CreationDate], [ModificationDate], [CreatedBy], [ModifiedBy], [Comment], [ContentEn], [ContentAr],                                                                                              [TemplateName]) 
+VALUES (N'CampRejected', GETDATE(),      NULL,               N'system',   NULL,         NULL,      NULL,        N'نأسف لإبلاغكم بأن معسكر {0} قد تم رفضه. من فضلك راجع تعليقات فريقنا على المعسكر وحاول نشره مجددًا.', N'CampRejected')
+GO
+
+
+If not exists (select * from [Sms].[MessageTemplates] where code='CampPublished')
+INSERT [Sms].[MessageTemplates] 
+       ([Code],          [CreationDate], [ModificationDate], [CreatedBy], [ModifiedBy], [Comment], [ContentEn], [ContentAr],                                                                               [TemplateName]) 
+VALUES (N'CampPublished', GETDATE(),      NULL,               N'system',   NULL,         NULL,      NULL,       N'عزيزنا المعلم، لقد نشرت معسكر {0} على التطبيق بنجاح. نرجو لك تجربة مثمرة مع طلابك.', N'CampPublished')
+GO

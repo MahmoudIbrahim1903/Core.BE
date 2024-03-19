@@ -1,0 +1,13 @@
+﻿USE [O7.Microservice.MessagingDb]
+GO
+SET IDENTITY_INSERT [Configuration].[Settings] ON 
+GO
+INSERT [Configuration].[Settings] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value]) VALUES (1, N'mc-1', NULL, N'O7', CAST(N'2020-02-10T00:00:00.0000000' AS DateTime2), NULL, NULL, N'EnableWhiteList', NULL, NULL, NULL, NULL, 3, 0, N'false')
+INSERT [Configuration].[Settings] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value]) VALUES (2, N'mc-2', NULL, N'O7', CAST(N'2020-02-10T00:00:00.0000000' AS DateTime2), NULL, NULL, N'WhiteList', NULL, NULL, NULL, NULL, 0, 0, N'172.16.0.171,::1')
+INSERT [Configuration].[Settings] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value]) VALUES (3, N'mc-3', NULL, N'O7', CAST(N'2020-02-10T00:00:00.0000000' AS DateTime2), NULL, NULL, N'MessageDelayValue', NULL, NULL, NULL, NULL, 1, 0, N'4000')
+INSERT [Configuration].[Settings] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value]) VALUES (4, N'mc-4', NULL, N'O7', CAST(N'2020-02-10T00:00:00.0000000' AS DateTime2), NULL, NULL, N'NotificationHubConnectionString', NULL, NULL, NULL, NULL, 0, 2, N'Endpoint=sb://o7notification-namespace.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=HzbkpaFXoEoB0vAdtpEUNRmzGO8vWYWCKsHQsPZN02M=')
+INSERT [Configuration].[Settings] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value]) VALUES (5, N'mc-5', NULL, N'O7', CAST(N'2020-02-10T00:00:00.0000000' AS DateTime2), NULL, NULL, N'NotificationHubPath', NULL, NULL, NULL, NULL, 0, 2, N'O7notification-Hub')
+INSERT [Configuration].[Settings] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value]) VALUES (6, N'mc-6', NULL, N'O7', CAST(N'2020-02-10T00:00:00.0000000' AS DateTime2), NULL, NULL, N'FirebaseWebCredentialsFilePath', NULL, NULL, NULL, NULL, 0, 2, N'./API/PushNotification/Firebase/Credentials/Clients/O7/web-firebase-key.json')
+GO
+SET IDENTITY_INSERT [Configuration].[Settings] OFF
+GO

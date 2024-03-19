@@ -1,0 +1,6 @@
+﻿if not exists (select * from [Sms].MessageTemplates where code='TherapistOpenSlotToClient')
+INSERT [Sms].[MessageTemplates] (
+		[Code],				[CreationDate],									  [ModificationDate], [CreatedBy], [ModifiedBy], [Comment], [ContentEn],																																											  [ContentAr],																																												[TemplateName]) 
+VALUES (N'TherapistOpenSlotToClient',(select GetDate()), NULL,			  N'system',	NULL,		 NULL,		
+N'{0} has opened time slots on the O7 Therapy App! Book your session on the App now.', 
+N'{0} has opened time slots on the O7 Therapy App! Book your session on the App now.', N'TherapistOpenSlotToClient')

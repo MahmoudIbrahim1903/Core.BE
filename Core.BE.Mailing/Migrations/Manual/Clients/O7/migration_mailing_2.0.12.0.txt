@@ -1,0 +1,10 @@
+﻿
+USE [O7.Microservice.MailingDb]
+
+if not exists (select * from [O7.Microservice.MailingDb].[Mailing].MailTemplates where MailType='PatientSessionAboutToStartEmailType')
+Begin
+
+INSERT INTO [O7.Microservice.MailingDb].[Mailing].[MailTemplates] 
+                                ([Code],  [Comment]	, [CreatedBy], [CreationDate] , [MailType] ,[ModificationDate] ,[ModifiedBy] ,[TemplateNameAr] ,[TemplateNameEn])
+                         VALUES ('MT-16',  null     , 'EME'		 , (select GETDATE()) ,'PatientSessionAboutToStartEmailType' ,null	,null , 'PatientSessionAboutToStartTemplateAr.html'	 ,'PatientSessionAboutToStartTemplateEn.html')
+End

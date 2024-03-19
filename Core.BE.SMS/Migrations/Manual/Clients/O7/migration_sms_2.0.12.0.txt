@@ -1,0 +1,6 @@
+﻿if not exists (select * from [O7.Microservice.SmsDb].[Sms].MessageTemplates where code='TherapistRequestSlot')
+INSERT [O7.Microservice.SmsDb].[Sms].[MessageTemplates] (
+		[Code],				[CreationDate],									  [ModificationDate], [CreatedBy], [ModifiedBy], [Comment], [ContentEn],																																											  [ContentAr],																																												[TemplateName]) 
+VALUES (N'TherapistRequestSlot',(select GetDate()), NULL,			  N'system',	NULL,		 NULL,		
+N'A client has requested to book a session with you on the O7 platform. Please open slots at your earliest availability, on your O7 Profile, and the client will be notified to book!', 
+N'A client has requested to book a session with you on the O7 platform. Please open slots at your earliest availability, on your O7 Profile, and the client will be notified to book!', N'TherapistRequestSlot')

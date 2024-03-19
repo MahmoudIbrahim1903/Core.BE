@@ -1,0 +1,74 @@
+﻿--======== DML Staging =================
+--======================================
+
+
+USE [Dryve.Microservice.MessagingDb]
+GO
+  UPDATE [Dryve.Microservice.MessagingDb].[Messaging].[MessageTypes] SET [MessageTemplateId] = 46
+  WHERE Code='TRP-CMP'
+
+  UPDATE [Dryve.Microservice.MessagingDb].[Messaging].[MessageTemplates] SET ContentEn='We were unable to verify your {0} due to {1}. Please re-submit the necessary information.',
+  ContentAr='لم نتمكن من التحقق من سيارتك ال{0} بسبب {1}. برجاء إعادة تقديم البيانات اللازمة.'
+  WHERE Name = 'CarLicenseRejected'
+GO
+
+-----======================================
+
+--======== DML Production =================
+--=========================================
+
+
+USE [Dryve.Microservice.MessagingDb]
+GO
+UPDATE [Dryve.Microservice.MessagingDb].[Messaging].[MessageTypes] SET [MessageTemplateId] = 46
+  WHERE Code='TRP-CMP'
+
+UPDATE [Dryve.Microservice.MessagingDb].[Messaging].[MessageTemplates] SET ContentEn='We were unable to verify your {0} due to {1}. Please re-submit the necessary information.',
+  ContentAr='لم نتمكن من التحقق من سيارتك ال{0} بسبب {1}. برجاء إعادة تقديم البيانات اللازمة.'
+  WHERE Name = 'CarLicenseRejected'
+GO
+
+
+
+
+========== peter ================
+
+INSERT INTO [Dryve.Microservice.MessagingDb].[Messaging].[MessageTemplates] (Code, ContentAr,ContentEn , CreatedBy ,CreationDate, [Name], TitleAr , TitleEn)
+VALUES ('T-1233', N' {2} تم الغاء طلب الحجز الخاص بالسائق {1} علي سيارتك {0} بواسطة', 'Your booking with driver {1} on your vehicle {0} has cancelled by {2}','peter', GETDATE(),'Cancel booking',N'{الغاء طلب الحجز بواسطة {0','Cancelled booking by {0}');
+
+INSERT INTO [Dryve.Microservice.MessagingDb].[Messaging].[MessageTypes] (Code,CreatedBy,CreationDate,MessageTemplateId,[Name])
+VALUES ('BR-CNL-AD-TO-OW','peter',GETDATE(),scope_identity(),'Cancel Booking')
+
+INSERT INTO [Dryve.Microservice.MessagingDb].[Messaging].[MessageTemplates] (Code, ContentAr,ContentEn , CreatedBy ,CreationDate, [Name], TitleAr , TitleEn)
+VALUES ('T-', N' {2} تم الغاء الرحلة الخاصة بالسائق {1} علي سيارتك {0} بواسطة', 'Your trip with driver {1} on your vehicle {0} has cancelled by {2}','peter', GETDATE(),'Cancel trip',N'{الغاء الرحلة بواسطة {0','Cancelled trip by {0}');
+ 
+INSERT INTO [Dryve.Microservice.MessagingDb].[Messaging].[MessageTypes] (Code,CreatedBy,CreationDate,MessageTemplateId,[Name])
+VALUES ('CNFRM-BR-CNL-AD-TO-OW','peter',GETDATE(),scope_identity(),'Cancel trip')
+
+
+
+==============Nasser==================
+INSERT INTO [Dryve.Microservice.MessagingDb].[Messaging].[MessageTemplates] (Code, ContentAr,ContentEn , CreatedBy ,CreationDate, [Name], TitleAr , TitleEn)
+VALUES ('T-12345', N'لم نتمكن من التحقق من صحيفة الحالة الجنائية الخاصة بك بسبب {0}. يرجى إعادة تقديم البيانات اللازمة.', 'We were unable to verify your criminal record due to {0}., please re-submit the necessary information.','Nasser', GETDATE(),'DriverCriminalRecordRejected',N'تأكيد حسابك','Account Verification');
+
+INSERT INTO [Dryve.Microservice.MessagingDb].[Messaging].[MessageTypes] (Code,CreatedBy,CreationDate,MessageTemplateId,[Name])
+VALUES ('DRV-CRMNL-REJ','Nasser',GETDATE(),scope_identity(),'Account Verification')
+
+INSERT INTO [Dryve.Microservice.MessagingDb].[Messaging].[MessageTemplates] (Code, ContentAr,ContentEn , CreatedBy ,CreationDate, [Name], TitleAr , TitleEn)
+VALUES ('T-12346', N'تم التأكد من مستند إثبات محل الإقامة الخاصة بك.', 'Your residency record has been verified.','Nasser', GETDATE(),'DriverResidencyRecordVerified',N'تأكيد حسابك','Account Verification');
+
+INSERT INTO [Dryve.Microservice.MessagingDb].[Messaging].[MessageTypes] (Code,CreatedBy,CreationDate,MessageTemplateId,[Name])
+VALUES ('RES-VRF','Nasser',GETDATE(),scope_identity(),'Account Verification')
+
+
+INSERT INTO [Dryve.Microservice.MessagingDb].[Messaging].[MessageTemplates] (Code, ContentAr,ContentEn , CreatedBy ,CreationDate, [Name], TitleAr , TitleEn)
+VALUES ('T-12347', N'تم التأكد من صحيفة الحالة الجنائيةالخاصة بك', 'Your criminal record has been verified','Nasser', GETDATE(),'DriverCriminalRecordVerified',N'تأكيد حسابك','Account Verification');
+
+INSERT INTO [Dryve.Microservice.MessagingDb].[Messaging].[MessageTypes] (Code,CreatedBy,CreationDate,MessageTemplateId,[Name])
+VALUES ('DRV-CRMNL-VRF','Nasser',GETDATE(),scope_identity(),'Account Verification')
+
+INSERT INTO [Dryve.Microservice.MessagingDb].[Messaging].[MessageTemplates] (Code, ContentAr,ContentEn , CreatedBy ,CreationDate, [Name], TitleAr , TitleEn)
+VALUES ('T-12348', N'لم نتمكن من التحقق من مستند إثبات محل الإقامة الخاصة بك بسبب {0}. برجاء إعادة تقديم البيانات اللازمة', 'We were unable to verify your residency record due to {0}., please re-submit the necessary information.','Nasser', GETDATE(),'DriverResidencyRecordRejected',N'تأكيد حسابك','Account Verification');
+
+INSERT INTO [Dryve.Microservice.MessagingDb].[Messaging].[MessageTypes] (Code,CreatedBy,CreationDate,MessageTemplateId,[Name])
+VALUES ('RES-REJ','Nasser',GETDATE(),scope_identity(),'Account Verification')

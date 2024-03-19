@@ -1,0 +1,12 @@
+﻿--Aya
+--DML
+
+
+BEGIN
+   IF NOT EXISTS (select * from [Configuration].[Settings] where [key] ='IntermicroservicesHashKey')
+   BEGIN
+      INSERT [Configuration].[Settings] ([Code], [Comment], [CreatedBy], [CreationDate], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [User], [Value], [SettingType], [EnumTypeName], [DisplayName], [Description], [ShowInPortal], [UnitOfMeasure])
+VALUES ( N'vc-210', NULL, N'dryve', CAST(N'2019-03-24T00:00:00.0000000' AS DateTime2), N'Hashing', N'IntermicroservicesHashKey', NULL, NULL, NULL, NULL, 0, N'kjsdfiusef;7yewrhas-cds:sqd', 0, NULL, N'IntermicroservicesHashKey', N'IntermicroservicesHashKey', 0, null)
+   END
+END
+GO

@@ -1,0 +1,6 @@
+﻿
+delete from [EduGram.Microservice.MessagingDb].[Messaging].[MessageTypes] where code = 'LIVE-RMNDR-TECH'
+delete from [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates] where name = 'TeacherLiveLessonStartReminder'
+
+delete from [EduGram.Microservice.MessagingDb].[Messaging].[MessageTypes] where code = 'LIVE-RMNDR-STD'
+delete from [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates] where name = 'StudentLiveLessonStartReminder'

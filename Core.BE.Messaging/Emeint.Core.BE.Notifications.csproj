@@ -1,0 +1,79 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<AssemblyVersion>3.0.29.0</AssemblyVersion>
+		<FileVersion>3.0.29.0</FileVersion>
+		<SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+	</PropertyGroup>
+
+
+	<ItemGroup>
+		<Compile Remove="API\Controllers\Old_MessagingController.cs" />
+	</ItemGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DocumentationFile>Emeint.Core.BE.Notifications.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Folder Include="Domain\Models\" />
+		<Folder Include="Migrations\Manual\Clients\O7\" />
+		<Folder Include="wwwroot\" />
+		<Folder Include="Services\PushNotificationProviders\Firebase\Credentials\" />
+		<Folder Include="wwwroot\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.13" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.13">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.13" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+		<PackageReference Include="FirebaseAdmin" Version="2.3.0" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.26.0" />
+		<PackageReference Include="IdentityServer4.AccessTokenValidation" Version="3.0.1" />
+		<PackageReference Include="Microsoft.Azure.NotificationHubs" Version="2.0.0" />
+		<PackageReference Include="System.ValueTuple" Version="4.5.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Core.BE.Configurations\Emeint.Core.BE.Configurations.csproj" />
+		<ProjectReference Include="..\Core.BE.InterCommunication\Emeint.Core.BE.InterCommunication.csproj" />
+		<ProjectReference Include="..\Core.BE\Emeint.Core.BE.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="EventBus">
+			<HintPath>Libraries\EventBus.dll</HintPath>
+		</Reference>
+		<Reference Include="EventBusRabbitMQ">
+			<HintPath>Libraries\EventBusRabbitMQ.dll</HintPath>
+		</Reference>
+		<Reference Include="EventBusServiceBus">
+			<HintPath>Libraries\EventBusServiceBus.dll</HintPath>
+		</Reference>
+		<Reference Include="IntegrationEventLogEF">
+			<HintPath>Libraries\IntegrationEventLogEF.dll</HintPath>
+		</Reference>
+		<Reference Include="Microsoft.AspNetCore.HealthChecks">
+			<HintPath>Libraries\Microsoft.AspNetCore.HealthChecks.dll</HintPath>
+		</Reference>
+		<Reference Include="Microsoft.Extensions.HealthChecks">
+			<HintPath>Libraries\Microsoft.Extensions.HealthChecks.dll</HintPath>
+		</Reference>
+		<Reference Include="Microsoft.Extensions.HealthChecks.SqlServer">
+			<HintPath>Libraries\Microsoft.Extensions.HealthChecks.SqlServer.dll</HintPath>
+		</Reference>
+		<Reference Include="WebHost.Customization">
+			<HintPath>Libraries\WebHost.Customization.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+</Project>

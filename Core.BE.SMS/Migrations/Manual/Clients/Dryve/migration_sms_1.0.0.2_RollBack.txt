@@ -1,0 +1,11 @@
+﻿--Aya
+--DML
+
+
+BEGIN
+   IF  EXISTS (select * from [Configuration].[Settings] where [key] ='IntermicroservicesHashKey')
+   BEGIN
+      delete from [Configuration].[Settings] where [key] ='IntermicroservicesHashKey'
+   END
+END
+GO

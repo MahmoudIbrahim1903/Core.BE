@@ -1,0 +1,4 @@
+﻿
+if not exists (select * from [Sms].MessageTemplates where code='ForgotPassword')
+INSERT [Sms].[MessageTemplates] ([Code], [CreationDate], [ModificationDate], [CreatedBy], [ModifiedBy], [Comment], [ContentEn], [ContentAr], [TemplateName]) VALUES (N'ForgotPassword', CAST(N'2020-04-28T00:00:00.0000000' AS DateTime2), NULL, N'system', NULL, NULL, N'Your new password is {0}.', N'بناءً على طلبك، إليك كلمة المرور الجديدة {0}.', N'ForgotPassword')
+GO

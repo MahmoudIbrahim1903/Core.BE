@@ -1,0 +1,5 @@
+﻿USE [O7.Microservice.SmsDb]
+GO
+
+INSERT [Sms].[MessageTemplates] ([Code], [CreationDate], [ModificationDate], [CreatedBy], [ModifiedBy], [Comment], [ContentEn], [ContentAr], [TemplateName]) VALUES (N'TherapistSessionAboutToStart', CAST(N'2019-04-01T00:00:00.0000000' AS DateTime2), NULL, N'system', NULL, NULL,  N'Session is about to start. {0}', N'الجلسة علي وشك البدء. {0}', N'TherapistSessionAboutToStart')
+GO

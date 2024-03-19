@@ -1,0 +1,10 @@
+﻿SET IDENTITY_INSERT [Messaging].[MessageTemplates] ON
+INSERT [Messaging].[MessageTemplates] 
+       ([Id], [Code],    [Comment], [ContentAr],                                                                                                                       [ContentEn],                                                                                                  [CreatedBy], [CreationDate],[ModificationDate], [ModifiedBy], [Name],                          [TitleAr],           [TitleEn]) 
+VALUES (10,    N'T-1170', NULL,      N'رد المدرس على التعليق الذي تتابعه على {0} في  {1}', N'Teacher added a reply to a comment you''re following on {0} in {1}', N'Edugram',  GETDATE(),     NULL,               NULL,         N'TeacherRepliedToComment', N'ردود جديدة', N'New Replies')
+SET IDENTITY_INSERT [Messaging].[MessageTemplates] off
+
+
+INSERT [Messaging].[MessageTypes]       
+       ([Code],         [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) 
+VALUES (N'TEC-COM-REP-STD', NULL,      N'Edugram',  GETDATE()     , 10,                   NULL,               NULL,         N'Teacher Replied to Student Comment')

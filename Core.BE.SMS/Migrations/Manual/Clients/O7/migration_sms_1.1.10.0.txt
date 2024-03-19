@@ -1,0 +1,8 @@
+﻿if not exists (select * from [O7.Microservice.SmsDb].[Sms].MessageTemplates where code='SessionCanceled')
+INSERT [O7.Microservice.SmsDb].[Sms].[MessageTemplates] (
+		[Code],				[CreationDate],									  [ModificationDate], [CreatedBy], [ModifiedBy], [Comment], [ContentEn],																																											  [ContentAr],																																												[TemplateName]) 
+VALUES (N'SessionCancelled',(select GetDate()), NULL,			  N'system',	NULL,		 NULL,		
+N'Your request to cancel your session with {0}, scheduled on {1} at {2} is accepted. 
+Please browse through our  therapists’ list to book another session. Thank you for using O7 Therapy!', 
+N'Your request to cancel your session with {0}, scheduled on {1} at {2} is accepted. 
+Please browse through our therapists’ list to book another session. Thank you for using O7 Therapy!', N'SessionCanceled')

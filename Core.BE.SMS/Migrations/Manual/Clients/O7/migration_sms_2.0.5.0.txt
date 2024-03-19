@@ -1,0 +1,7 @@
+﻿if exists (select * from [O7.Microservice.SmsDb].[Sms].MessageTemplates where code='SessionCanceled')
+
+UPDATE [Sms].[MessageTemplates]
+   SET [ContentEn] = N'Your session booked with {0}, on {1} and at {2} is confirmed to be canceled.'
+      ,[ContentAr] = N'Your session booked with {0}, on {1} and at {2} is confirmed to be canceled.'
+ WHERE [TemplateName] = 'SessionCanceled'
+GO

@@ -1,0 +1,8 @@
+﻿USE [EduGram.Microservice.SmsDb]
+GO
+INSERT [Configuration].[Settings] ([Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value], [Description], [DisplayName], [ShowInPortal], [UnitOfMeasure]) VALUES (N'sc-1', NULL, N'EduGram', GETDATE(), NULL, N'VictoryLink', N'VictoryLinkSMSUserName', NULL, NULL, NULL, NULL, 0, 2, N'Edugram', N'Victory Link SMS User Name', N'Victory Link SMS User Name', 1, NULL)
+GO
+INSERT [Configuration].[Settings] ([Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value], [Description], [DisplayName], [ShowInPortal], [UnitOfMeasure]) VALUES (N'sc-2', NULL, N'EduGram', GETDATE(), NULL, N'VictoryLink', N'VictoryLinkSMSPassword', NULL, NULL, NULL, NULL, 0, 2, N'EbtMnCX9HF', N'Victory Link SMS Password', N'Victory Link SMS Password', 1, NULL)
+GO
+INSERT [Configuration].[Settings] ([Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value], [Description], [DisplayName], [ShowInPortal], [UnitOfMeasure]) VALUES (N'sc-2', NULL, N'EduGram', GETDATE(), NULL, N'VictoryLink', N'VictoryLinkSMSSender', NULL, NULL, NULL, NULL, 0, 2, N'Edugram', N'Victory Link SMS Sender', N'Victory Link SMS Sender', 1, NULL)
+GO

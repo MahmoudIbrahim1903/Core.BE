@@ -1,0 +1,10 @@
+﻿--Shimaa 
+
+USE [EduGram.Microservice.MailingDb]
+BEGIN
+   IF NOT EXISTS (select * from [Mailing].[MailTemplates] where [MailType] ='TeacherPublishedCampEmailType')
+   BEGIN
+   INSERT [Mailing].[MailTemplates] ([Code], [Comment], [CreatedBy], [CreationDate], [MailType], [ModificationDate], [ModifiedBy], [TemplateNameAr], [TemplateNameEn]) VALUES (N'MT-4', NULL, N'EME', GETDATE(), N'TeacherPublishedCampEmailType', NULL, NULL, N'CampPublishedToTeacherAr.html', N'CampPublishedToTeacherEn.html')
+   END
+END
+GO

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Emeint.Core.BE.Media</name>
+    </assembly>
+    <members>
+        <member name="M:Emeint.Core.BE.Media.API.Controllers.AudioController.Post(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            Upload Audio
+            </summary>
+            <param name="audio"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Emeint.Core.BE.Media.API.Controllers.DocumentController.Post(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            Upload document
+            </summary>
+            <param name="document"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Emeint.Core.BE.Media.API.Controllers.VideoController.Post(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            Upload video
+            </summary>
+            <param name="video"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Emeint.Core.BE.Media.Domain.Enums.MediaErrorCodes">
+            <summary>
+            From 300 to 399
+            </summary>
+        </member>
+    </members>
+</doc>

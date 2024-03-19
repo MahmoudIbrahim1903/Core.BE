@@ -1,0 +1,34 @@
+﻿USE [EduGram.Microservice.MailingDb]
+BEGIN
+   IF NOT EXISTS (select * from [Mailing].[MailTemplates] where [MailType] ='CreateTeacherVerificationEmailType')
+   BEGIN
+   INSERT [Mailing].[MailTemplates] ([Code], [Comment], [CreatedBy], [CreationDate], [MailType], [ModificationDate], [ModifiedBy], [TemplateNameAr], [TemplateNameEn]) VALUES (N'MT-1', NULL, N'EME', (select GETDATE()), N'CreateTeacherVerificationEmailType', NULL, NULL, N'VerifyTeacherEmailTemplateAr.html', N'VerifyTeacherEmailTemplateAr.html')
+   END
+END
+GO
+
+BEGIN
+   IF NOT EXISTS (select * from [Configuration].[Settings] where [key] ='Assets')
+   BEGIN
+   INSERT [Configuration].[Settings] ([Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value], [Description], [DisplayName], [ShowInPortal], [UnitOfMeasure]) VALUES (N'S-1', NULL, N'EME', (select GetDate()), NULL, N'System', N'Assets', NULL, NULL, NULL, NULL, 0, 2, N'src="http://edugramadmin.emeint.com/', N'Assets', N'Assets', 0, NULL)
+   END
+END
+	
+GO
+
+
+BEGIN
+   IF NOT EXISTS (select * from [Configuration].[Settings] where [key] ='HtmlPath')
+   BEGIN
+   INSERT [Configuration].[Settings] ([Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value], [Description], [DisplayName], [ShowInPortal], [UnitOfMeasure]) VALUES (N'S-2', NULL, N'EME', (select GetDate()), NULL, N'System', N'HtmlPath', NULL, NULL, NULL, NULL, 0, 2, N'/Clients/EduGram/EmailTemplates/HTMLPages/', N'Html Path', N'Html Path', 0, NULL)
+   END
+END
+
+
+  
+BEGIN
+   IF NOT EXISTS (select * from [Configuration].[Settings] where [key] ='HtmlPath')
+   BEGIN
+INSERT [Configuration].[Settings] ( [Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value]) VALUES ( N's-3', NULL, N'edugram', CAST(N'2018-04-04T00:00:00.0000000' AS DateTime2), NULL, N'SendGrid', N'SendGrid:apiKey', NULL, NULL, NULL, NULL, 0, 0, N'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')
+   END
+END

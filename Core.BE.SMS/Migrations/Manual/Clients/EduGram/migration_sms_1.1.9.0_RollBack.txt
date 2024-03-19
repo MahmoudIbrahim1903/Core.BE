@@ -1,0 +1,3 @@
+﻿update [EduGram.Microservice.SmsDb].[Sms].[MessageTemplates]
+set ContentAr = 'Welcome to Edugram! Please use the following verification code to sign up: {0}.',
+where code = 'VerifyPhoneNumber'

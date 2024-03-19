@@ -1,0 +1,24 @@
+﻿--Peter
+--DML
+
+
+USE [O7.Microservice.MailingDb]
+
+INSERT INTO [Mailing].[MailTemplates] ([Code],	[Comment]	, [CreatedBy], [CreationDate]	 , [MailType]					,[ModificationDate] ,[ModifiedBy] ,[TemplateNameAr] ,[TemplateNameEn])
+                               VALUES ('MT-12'	 , null     , 'EME'		 ,(select GETDATE()) ,'RequestSlotToTherapist' ,null					,null	   , 'RequestSlotToTherapistEmailTemplateAr.html'	 ,'RequestSlotToTherapistEmailTemplateEn.html')
+
+
+INSERT INTO [Mailing].[MailTemplates] ([Code],	[Comment]	, [CreatedBy], [CreationDate]	 , [MailType]					,[ModificationDate] ,[ModifiedBy] ,[TemplateNameAr] ,[TemplateNameEn])
+                               VALUES ('MT-13'	 , null     , 'EME'		 ,(select GETDATE()) ,'RequestSlotToAdmin' ,null					,null	   , 'RequestSlotToAdminEmailTemplateAr.html'	 ,'RequestSlotToAdminEmailTemplateEn.html')
+
+
+
+
+INSERT INTO [Mailing].[MailTemplates] ([Code],	[Comment]	, [CreatedBy], [CreationDate]	 , [MailType]					,[ModificationDate] ,[ModifiedBy] ,[TemplateNameAr] ,[TemplateNameEn])
+                               VALUES ('MT-14'	 , null     , 'EME'		 ,(select GETDATE()) ,'OpenSlotToClient' ,null					,null	   , 'OpenSlotToClientEmailTemplateAr.html'	 ,'OpenSlotToClientEmailTemplateEn.html')
+
+
+
+INSERT INTO [Mailing].[MailTemplates] ([Code],	[Comment]	, [CreatedBy], [CreationDate]	 , [MailType]					,[ModificationDate] ,[ModifiedBy] ,[TemplateNameAr] ,[TemplateNameEn])
+                               VALUES ('MT-15'	 , null     , 'EME'		 ,(select GETDATE()) ,'OpenSlotToAdmin' ,null					,null	   , 'OpenSlotToAdminEmailTemplateAr.html'	 ,'OpenSlotToAdminEmailTemplateEn.html')
+

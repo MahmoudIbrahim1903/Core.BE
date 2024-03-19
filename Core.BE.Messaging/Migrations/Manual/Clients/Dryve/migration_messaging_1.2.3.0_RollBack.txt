@@ -1,0 +1,3 @@
+﻿---------------------------------Samar---------------
+delete from [Dryve.Microservice.MessagingDb].[Messaging].[MessageTemplates] where name = 'OwnerVehicleServiceCentersChanged'
+delete from [Dryve.Microservice.MessagingDb].[Messaging].[MessageTypes] where code = 'O-VSC-CHANGED'

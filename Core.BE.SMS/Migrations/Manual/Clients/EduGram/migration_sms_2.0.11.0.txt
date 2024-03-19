@@ -1,0 +1,12 @@
+﻿		
+If not exists (select * from [Sms].[MessageTemplates] where code='CampUnpublished')
+INSERT [Sms].[MessageTemplates] 
+       ([Code],             [CreationDate], [ModificationDate], [CreatedBy], [ModifiedBy], [Comment], [ContentEn],                                                   [ContentAr],                                                                                                        [TemplateName]) 
+VALUES (N'CampUnpublished', GETDATE(),      NULL,               N'system',   NULL,         NULL,      N'Your camp {0} is unpublished. Please contact us if needed.', N'عزيزنا المعلم، لقد أزلنا معسكر {0} من قائمة معسكراتنا المنشورة. رجاءً تواصل معنا إذا احتجت الدعم الفني.', N'CampUnpublished')
+
+
+If not exists (select * from [Sms].[MessageTemplates] where code='CampRepublished')
+INSERT [Sms].[MessageTemplates] 
+       ([Code],             [CreationDate], [ModificationDate], [CreatedBy], [ModifiedBy], [Comment], [ContentEn],                                                   [ContentAr],                                                                             [TemplateName]) 
+VALUES (N'CampRepublished', GETDATE(),      NULL,               N'system',   NULL,         NULL,      N'Your camp {0} is republished. Please contact us if needed.', N'عزيزنا المعلم، لقد أعدنا نشر معسكر {0}. رجاءً تواصل معنا إذا احتجت الدعم الفني.', N'CampRepublished')
+GO

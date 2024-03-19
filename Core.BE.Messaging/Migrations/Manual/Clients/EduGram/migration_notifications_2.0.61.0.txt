@@ -1,0 +1,24 @@
+﻿SET IDENTITY_INSERT [Messaging].[MessageTemplates] ON
+INSERT [Messaging].[MessageTemplates] 
+       ([Id], [Code],    [Comment], [ContentAr],                                                                                                                       [ContentEn],                                                                                                  [CreatedBy], [CreationDate],[ModificationDate], [ModifiedBy], [Name],                          [TitleAr],           [TitleEn]) 
+VALUES (11,    N'T-1171', NULL,      N'الطلاب فى إنتظارك. تأكد من اتصالك بانترنت قوي وإبدأ الآن', N'Students are waiting for you. Go Now!', N'Edugram',  GETDATE(),     NULL,               NULL,         N'TeacherLiveLessonStartReminder', N'اللايف فيديو سيبدأ خلال 10 دقائق', N'Live Session Starts in 10 minutes!')
+SET IDENTITY_INSERT [Messaging].[MessageTemplates] off
+
+
+INSERT [Messaging].[MessageTypes]       
+       ([Code],         [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) 
+VALUES (N'LIVE-RMNDR-TECH', NULL,      N'Edugram',  GETDATE()     , 11,                   NULL,               NULL,         N'Teacher Live Lesson Start Reminder')
+
+
+
+
+SET IDENTITY_INSERT [Messaging].[MessageTemplates] ON
+INSERT [Messaging].[MessageTemplates] 
+       ([Id], [Code],    [Comment], [ContentAr],                                                                                                                       [ContentEn],                                                                                                  [CreatedBy], [CreationDate],[ModificationDate], [ModifiedBy], [Name],                          [TitleAr],           [TitleEn]) 
+VALUES (12,    N'T-1172', NULL,      N'اللايف لـ {0} على وشك البدء. انضم الآن', N'Live for {0} is about to start. Join Now!', N'Edugram',  GETDATE(),     NULL,               NULL,         N'StudentLiveLessonStartReminder', N'اللايف فيديو سيبدأ الساعة {0}', N'Live Session Starts at {0}.')
+SET IDENTITY_INSERT [Messaging].[MessageTemplates] off
+
+
+INSERT [Messaging].[MessageTypes]       
+       ([Code],         [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) 
+VALUES (N'LIVE-RMNDR-STD', NULL,      N'Edugram',  GETDATE()     , 12,                   NULL,               NULL,         N'Student Live Lesson Start Reminder')

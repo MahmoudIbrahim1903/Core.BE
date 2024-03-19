@@ -1,0 +1,45 @@
+﻿BEGIN
+   IF NOT EXISTS (select * from [Configuration].[Settings] where [key] ='TrackAdminNotifications')
+   BEGIN
+
+INSERT INTO [Configuration].[Settings]
+           ([Code]
+           ,[Comment]
+           ,[CreatedBy]
+           ,[CreationDate]
+           ,[EnumTypeName]
+           ,[Group]
+           ,[Key]
+           ,[Maximum]
+           ,[Minimum]
+           ,[ModificationDate]
+           ,[ModifiedBy]
+           ,[SettingType]
+           ,[User]
+           ,[Value]
+           ,[Description]
+           ,[DisplayName]
+           ,[ShowInPortal]
+           ,[UnitOfMeasure])
+     VALUES
+           (N'mc-7'
+           ,NULL
+           ,N'System'
+           ,(select GETDATE())
+           ,NULL
+           ,N'Messaging'
+           ,N'TrackAdminNotifications'
+           ,NULL
+           ,NULL
+           ,NULL
+           ,NULL
+           ,3
+           ,3
+           ,N'false'
+           ,N'keep tracking for admin notifications by save status and destinations'
+           ,N'TrackAdminNotifications'
+           ,1
+           ,NULL)
+   END
+END
+GO

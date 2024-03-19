@@ -1,0 +1,16 @@
+﻿INSERT INTO [Dryve.Microservice.MessagingDb].[Messaging].[MessageTemplates] (Code, ContentAr,ContentEn , CreatedBy ,CreationDate, [Name], TitleAr , TitleEn)
+VALUES ('T-100989', N' يمكنك تعديل أفضليات الإيجار مباشرةً من ملف سيارتك.يرجى العلم أن طبقاً لشروط وثيقة التأمين، الحد الأقصى للتغطية هو المبلغ المؤمن عليه المذكور: {0} جم',
+'You can edit your rental preferences directly from the car profile.Please note that as per the insurance policy, the maximum coverage for your car is the stated sum insured: EGP {0}.',
+'Samar', GETDATE(),'Vehicle Auto Published',N'!{لقد تم التحقق من ونشر سيارتك ال {0','Your {0} is now verified and published!');
+
+INSERT INTO [Dryve.Microservice.MessagingDb].[Messaging].[MessageTypes] (Code,CreatedBy,CreationDate,MessageTemplateId,[Name])
+VALUES ('Car_Auto_Published','Samar',GETDATE(),scope_identity(),'Vehicle Auto Published')
+
+
+
+  UPDATE [Dryve.Microservice.MessagingDb].[Messaging].[MessageTemplates] SET Name='Driver Driving License Verified_And_National_ID_Verified_And_CriminalVerified',
+  ContentAr='تم التحقق من حسابك بنجاح! يمكنك الآن إرسال طلبات حجز!' , ContentEn='Your account have been successfully verified! You can now start sending booking requests!'
+  WHERE Name='Driver Driving License Verified_And_National_ID_Verified'
+
+  UPDATE [Dryve.Microservice.MessagingDb].[Messaging].[MessageTypes] SET Code='DRV-L-VRF_NAT-VRF_CRMNL-VRF'
+  WHERE Code='DRV-L-VRF_NAT-VRF'

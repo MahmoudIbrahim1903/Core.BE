@@ -1,0 +1,26 @@
+﻿USE [O7.Microservice.MessagingDb]
+GO
+SET IDENTITY_INSERT [Messaging].[MessageTemplates] ON 
+GO
+INSERT [Messaging].[MessageTemplates] ([Id], [Code], [Comment], [ContentAr], [ContentEn], [CreatedBy], [CreationDate], [ModificationDate], [ModifiedBy], [Name], [TitleAr], [TitleEn]) VALUES (1, N'T-7652', NULL, N'{0}', N'{0}', N'Nasser', CAST(N'2018-05-21 11:07:06.1971225' AS DateTime2), NULL, NULL, N'Text', N'رسالة خاصة', N'Incomming Message')
+GO
+INSERT [Messaging].[MessageTemplates] ([Id], [Code], [Comment], [ContentAr], [ContentEn], [CreatedBy], [CreationDate], [ModificationDate], [ModifiedBy], [Name], [TitleAr], [TitleEn]) VALUES (2, N'T-1122', NULL, N'تم تأكيد حجز جلستك مع {0} في {1} وفي الساعة {2}.', N'Your session with {0} on {1} and at {2} is confirmed.', N'O7', CAST(N'2018-05-21 09:34:22.2109479' AS DateTime2), NULL, NULL, N'SessionBookingConfirmedToPatient', N'تأكيد الحجز', N'Booking Confirmed')
+GO
+INSERT [Messaging].[MessageTemplates] ([Id], [Code], [Comment], [ContentAr], [ContentEn], [CreatedBy], [CreationDate], [ModificationDate], [ModifiedBy], [Name], [TitleAr], [TitleEn]) VALUES (3, N'T-1133', NULL, N'تم قبول طلب إلغاء جلستك مع {0} في {1} وفي الساعة {2}.', N'Your request to cancel your session with {0}, scheduled on {1} and at {2} is accepted.', N'O7', CAST(N'2018-05-21 09:34:22.2109479' AS DateTime2), NULL, NULL, N'SessionBookingCancelledToPatient', N'إلغاء الحجز', N'Booking Cancelled')
+GO
+INSERT [Messaging].[MessageTemplates] ([Id], [Code], [Comment], [ContentAr], [ContentEn], [CreatedBy], [CreationDate], [ModificationDate], [ModifiedBy], [Name], [TitleAr], [TitleEn]) VALUES (4, N'T-1144',NULL, N'تم قبول طلب تغيير ميعاد جلستك مع {0} في {1} وفي الساعة {2}. وميعاد حجزك الجديد في {3} وفي الساعة {4}.', N'Your request to reschedule your session with {0}, scheduled on {1} and at {2} is accepted. You new booking is on {3} and at {4}', N'O7', CAST(N'2018-05-21 09:34:22.2109479' AS DateTime2), NULL, NULL, N'SessionBookingRescheduledToPatient', N'تغيير ميعاد الحجز', N'Booking Rescheduled')
+GO
+INSERT [Messaging].[MessageTemplates] ([Id], [Code], [Comment], [ContentAr], [ContentEn], [CreatedBy], [CreationDate], [ModificationDate], [ModifiedBy], [Name], [TitleAr], [TitleEn]) VALUES (5, N'T-1155',NULL, N'لديك حجز جديد في {0} وفي الساعة {1}.', N'You have a new session booking on {0} and at {1}.', N'O7', CAST(N'2018-05-21 09:34:22.2109479' AS DateTime2), NULL, NULL, N'NewSessionBookingToTherapist', N'حجز جديد', N'New Session Booking')
+GO
+INSERT [Messaging].[MessageTemplates] ([Id], [Code], [Comment], [ContentAr], [ContentEn], [CreatedBy], [CreationDate], [ModificationDate], [ModifiedBy], [Name], [TitleAr], [TitleEn]) VALUES (6, N'T-1166',NULL, N'تم تأكيد إلغاء جلستك مع {0}, في {1} وفي الساعة {2}.', N'Your session booked with {0}, on {1} and at {2} is confirmed to be cancelled.', N'O7', CAST(N'2018-05-21 09:34:22.2109479' AS DateTime2), NULL, NULL, N'SessionCancelledToTherapist', N'إلغاء الجلسة', N'Session Cancelled')
+GO
+INSERT [Messaging].[MessageTemplates] ([Id], [Code], [Comment], [ContentAr], [ContentEn], [CreatedBy], [CreationDate], [ModificationDate], [ModifiedBy], [Name], [TitleAr], [TitleEn]) VALUES (7, N'T-1177',NULL, N'تم تغيير ميعاد جلستك مع {0}, إلى {1} وفي الساعة {2}.', N'Your session booked with {0} is confirmed to be Rescheduled on {1} and at {2}.', N'O7', CAST(N'2018-05-21 09:34:22.2109479' AS DateTime2), NULL, NULL, N'SessionRescheduledToTherapist', N'تغيير ميعاد الجلسة', N'Session Rescheduled')
+GO
+INSERT [Messaging].[MessageTemplates] ([Id], [Code], [Comment], [ContentAr], [ContentEn], [CreatedBy], [CreationDate], [ModificationDate], [ModifiedBy], [Name], [TitleAr], [TitleEn]) VALUES (8, N'T-1188',NULL, N'لديك جلسة مع {0}، في {1} وفي الساعة {2}.', N'Your session booked with {0}, on {1} and at {2}.', N'O7', CAST(N'2018-05-21 09:34:22.2109479' AS DateTime2), NULL, NULL, N'SessionReminderToTherapist', N'تذكير بالجلسة', N'Session Reminder')
+GO
+INSERT [Messaging].[MessageTemplates] ([Id], [Code], [Comment], [ContentAr], [ContentEn], [CreatedBy], [CreationDate], [ModificationDate], [ModifiedBy], [Name], [TitleAr], [TitleEn]) VALUES (9, N'T-1199',NULL, N'لديك جلسة في خلال {0} دقيقة . من فضلك كن على استعداد.', N'Reminder: You have a session in {0} minutes! Please ensure you are on-time.', N'O7', CAST(N'2018-05-21 09:34:22.2109479' AS DateTime2), NULL, NULL, N'FirstSessionReminderToPatient', N'تذكير بالجلسة', N'Session Reminder')
+GO
+INSERT [Messaging].[MessageTemplates] ([Id], [Code], [Comment], [ContentAr], [ContentEn], [CreatedBy], [CreationDate], [ModificationDate], [ModifiedBy], [Name], [TitleAr], [TitleEn]) VALUES (10, N'T-1200',NULL, N'لديك جلسة في خلال {0} دقيقة . من فضلك كن على استعداد.', N'Reminder: Your session is in {0} minutes! Please be ready on-time.', N'O7', CAST(N'2018-05-21 09:34:22.2109479' AS DateTime2), NULL, NULL, N'SecondSessionReminderToPatient', N'تذكير بالجلسة', N'Session Reminder')
+GO
+SET IDENTITY_INSERT [Messaging].[MessageTemplates] OFF
+GO

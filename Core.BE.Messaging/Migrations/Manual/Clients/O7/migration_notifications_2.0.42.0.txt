@@ -1,0 +1,15 @@
+﻿USE [O7.Microservice.MessagingDb]
+GO
+
+SET IDENTITY_INSERT [O7.Microservice.MessagingDb].[Messaging].[MessageTemplates] ON
+INSERT [O7.Microservice.MessagingDb].[Messaging].[MessageTemplates] 
+       ([Id], [Code],    [Comment], [ContentAr],                                                                                                                       [ContentEn],                                                                                                  [CreatedBy], [CreationDate],[ModificationDate], [ModifiedBy], [Name],                          [TitleAr],           [TitleEn]) 
+VALUES (11,    N'T-1300', NULL,      N'بفتح ميعاد متاح للحجز الآن  {0}  . لقد قام.', N'{0} has opened available bookings! Book here to reserve your session', N'O7',  GETDATE(),     NULL,               NULL,         N'openSlotToCLient', N'تم فتح ميعاد', N'Therapist open slot')
+SET IDENTITY_INSERT [O7.Microservice.MessagingDb].[Messaging].[MessageTemplates] off
+
+
+INSERT [O7.Microservice.MessagingDb].[Messaging].[MessageTypes]       
+       ([Code],         [Comment], [CreatedBy], [CreationDate], [MessageTemplateId], [ModificationDate], [ModifiedBy], [Name]) 
+VALUES (N'SM-TOS-PAT', NULL,      N'Edugram',  GETDATE()     , 11,                   NULL,               NULL,         N'therapist open slot to client')
+
+

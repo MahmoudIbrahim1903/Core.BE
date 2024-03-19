@@ -1,0 +1,26 @@
+﻿USE [Dryve.Microservice.MailingDb]
+GO
+SET IDENTITY_INSERT [Configuration].[Settings] ON 
+GO
+INSERT [Configuration].[Settings] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value]) VALUES (2, N'mc-1', NULL, N'dryve', CAST(N'2018-04-04T00:00:00.0000000' AS DateTime2), NULL, NULL, N'IdentityUrl', NULL, NULL, NULL, NULL, 0, 0, N'http://localhost:5100')
+GO
+INSERT [Configuration].[Settings] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value]) VALUES (3, N'mc-2', NULL, N'dryve', CAST(N'2018-04-04T00:00:00.0000000' AS DateTime2), NULL, NULL, N'EnableWhiteList', NULL, NULL, NULL, NULL, 0, 0, N'false')
+GO
+INSERT [Configuration].[Settings] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value]) VALUES (4, N'mc-3', NULL, N'dryve', CAST(N'2018-04-04T00:00:00.0000000' AS DateTime2), NULL, NULL, N'WhiteList', NULL, NULL, NULL, NULL, 0, 0, N'172.16.0.171,::1')
+GO
+INSERT [Configuration].[Settings] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value]) VALUES (5, N'mc-4', NULL, N'dryve', CAST(N'2018-04-04T00:00:00.0000000' AS DateTime2), NULL, NULL, N'Assets', NULL, NULL, NULL, NULL, 0, 0, N'src="https://dryve.emeint.com/')
+GO
+INSERT [Configuration].[Settings] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value]) VALUES (6, N'mc-5', NULL, N'dryve', CAST(N'2018-04-04T00:00:00.0000000' AS DateTime2), NULL, N'HtmlTemplet', N'HtmlTemplet:En', NULL, NULL, NULL, NULL, 0, 0, N'GenericTemplate.html')
+GO
+INSERT [Configuration].[Settings] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value]) VALUES (7, N'mc-6', NULL, N'dryve', CAST(N'2018-04-04T00:00:00.0000000' AS DateTime2), NULL, N'HtmlTemplet', N'HtmlTemplet:Ar', NULL, NULL, NULL, NULL, 0, 0, N'GenericTemplateAr.html')
+GO
+INSERT [Configuration].[Settings] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value]) VALUES (8, N'mc-7', NULL, N'dryve', CAST(N'2018-04-04T00:00:00.0000000' AS DateTime2), NULL, N'SendGrid', N'SendGrid:From', NULL, NULL, NULL, NULL, 0, 0, N'noreply@letsdryve.com')
+GO
+INSERT [Configuration].[Settings] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value]) VALUES (9, N'mc-8', NULL, N'dryve', CAST(N'2018-04-04T00:00:00.0000000' AS DateTime2), NULL, N'SendGrid', N'SendGrid:To', NULL, NULL, NULL, NULL, 0, 0, N'michael.adel@emeint.net')
+GO
+INSERT [Configuration].[Settings] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value]) VALUES (10, N'mc-9', NULL, N'dryve', CAST(N'2018-04-04T00:00:00.0000000' AS DateTime2), NULL, N'SendGrid', N'SendGrid:apiKey', NULL, NULL, NULL, NULL, 0, 0, N'SET_KEY')
+GO
+INSERT [Configuration].[Settings] ([Id], [Code], [Comment], [CreatedBy], [CreationDate], [EnumTypeName], [Group], [Key], [Maximum], [Minimum], [ModificationDate], [ModifiedBy], [SettingType], [User], [Value]) VALUES (1002, N'mc-10', NULL, N'dryve', CAST(N'2018-04-04T00:00:00.0000000' AS DateTime2), NULL, NULL, N'HtmlPath', NULL, NULL, NULL, NULL, 0, 0, N'/EmailTemplates/HTMLPages/')
+GO
+SET IDENTITY_INSERT [Configuration].[Settings] OFF
+GO

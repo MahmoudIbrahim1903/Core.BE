@@ -1,0 +1,8 @@
+﻿-- Samar
+
+------- DML
+
+update Messaging.MessageTemplates 
+set ContentEn ='{0} has declined your booking request for their {1}. Remember you can send up to {2} requests for the same period to increase your chances of a confirmed booking.',
+ContentAr = 'تم رفض طلبك لحجز سيارة {0} ال{1}! تذكر أنه يمكنك إرسال حتى {2} طلبات لنفس الفترة لتزيد من فرصك للحجز!'
+where code = (select Code from Messaging.MessageTemplates where id = (select MessageTemplateId from [Messaging].MessageTypes where code='BK-REJ'))

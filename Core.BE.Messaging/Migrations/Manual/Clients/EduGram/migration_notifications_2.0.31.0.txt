@@ -1,0 +1,4 @@
+﻿
+  Update [EduGram.Microservice.MessagingDb].[Messaging].[MessageTemplates]
+  Set [TitleAr] = N'تم تقييم الواجب الخاص بك.'
+  Where [Code] = 'T-1167'

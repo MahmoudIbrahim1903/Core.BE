@@ -1,0 +1,7 @@
+======================DML=================
+
+ delete [Dryve.Microservice.MessagingDb].[Messaging].[MessageTypes]
+ where code = 'PUB-VCL-O'
+
+  delete [Dryve.Microservice.MessagingDb].[Messaging].[MessageTemplates]
+  where code = 'T-PublishVehicle'

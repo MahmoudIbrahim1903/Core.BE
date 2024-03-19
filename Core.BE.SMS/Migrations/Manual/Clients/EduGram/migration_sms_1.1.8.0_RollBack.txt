@@ -1,0 +1,6 @@
+﻿
+USE [EduGram.Microservice.SmsDb]
+GO
+if exists (select * from [Sms].MessageTemplates where code='VerifyPhoneNumber')
+delete from [Sms].[MessageTemplates] where [Code]= 'VerifyPhoneNumber'
+GO

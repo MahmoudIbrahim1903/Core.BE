@@ -1,0 +1,12 @@
+﻿
+USE [O7.Microservice.MailingDb]
+
+if  exists (select * from [O7.Microservice.MailingDb].[Mailing].MailTemplates where MailType='SessionConfirmBookingEmailType')
+Begin
+
+update [O7.Microservice.MailingDb].[Mailing].[MailTemplates] set [ModificationDate] = (select GETDATE()),
+                                                                 [TemplateNameAr] = 'SessionCofirmBookingToClientEmailTemplateEn.html' ,
+                                                                 [TemplateNameEn] = 'SessionCofirmBookingToClientEmailTemplateEn.html'
+                                                                 where MailType='SessionConfirmBookingEmailType'
+
+End
